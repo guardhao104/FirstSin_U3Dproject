@@ -7,16 +7,27 @@ public class NPCTalkButton : MonoBehaviour
     public GameObject Button;
     public GameObject talkUI;
 
+    private void Awake()
+    {
+        Button.SetActive(false);
+        talkUI.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Button.SetActive(true);
+        if (collision.tag == "Player")
+        {
+            Button.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Button.SetActive(false);
-        talkUI.SetActive(false);
+        if (collision.tag == "Player")
+        {
+            Button.SetActive(false);
+            talkUI.SetActive(false);
+        }
     }
 
     void Update()
