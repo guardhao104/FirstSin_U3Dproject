@@ -1,0 +1,16 @@
+A
+Hello world!
+B
+Error: No permission!
+A
+Login.
+B
+Username:
+A
+xxxxxxxxxx!
+B
+Password:
+A
+*********!
+B
+User invalid! Exit();
