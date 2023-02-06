@@ -7,6 +7,7 @@ using TMPro;
 public class DialogSystem : MonoBehaviour
 {
     [Header("UI Component")]
+    public GameObject talkPanel;
     public Image headImage;
     public GameObject textLabel;
 
@@ -38,11 +39,11 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0) && index == textList.Count)
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
             if (index == textList.Count)
             {
-                gameObject.SetActive(false);
+                talkPanel.SetActive(false);
                 return;
             }
             else

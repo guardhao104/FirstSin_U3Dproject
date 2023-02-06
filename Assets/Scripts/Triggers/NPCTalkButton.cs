@@ -32,7 +32,7 @@ public class NPCTalkButton : MonoBehaviour
 
     void Update()
     {
-        if (Button.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (Button.activeSelf && talkUI.activeSelf == false && Input.GetKeyDown(KeyCode.E))
         {
             talkUI.SetActive(true);
         }
