@@ -44,6 +44,7 @@ public class DialogSystem : MonoBehaviour
             if (index == textList.Count)
             {
                 talkPanel.SetActive(false);
+                index = 0;
                 return;
             }
             else

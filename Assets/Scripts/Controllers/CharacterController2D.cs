@@ -14,6 +14,9 @@ public class CharacterController2D : MonoBehaviour
     public float gravityScale = 1.5f;
     public Camera mainCamera;
 
+    public Transform farLeft;  // End of screen Left
+    public Transform farRight;  //End of Screen Right
+
     float speed = 0f;
     bool facingRight = true;
     float moveDirection = 0;
@@ -90,7 +93,18 @@ public class CharacterController2D : MonoBehaviour
         // Camera follow
         if (mainCamera)
         {
-            mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
+            if (t.position.x > farRight.position.x)
+            {
+                mainCamera.transform.position = new Vector3(farRight.position.x, cameraPos.y, cameraPos.z);
+            }
+            else if (t.position.x < farLeft.position.x)
+            {
+                mainCamera.transform.position = new Vector3(farLeft.position.x, cameraPos.y, cameraPos.z);
+            }
+            else
+            {
+                mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
+            }
         }
     }
 
