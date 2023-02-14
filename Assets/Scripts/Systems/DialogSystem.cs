@@ -10,6 +10,7 @@ public class DialogSystem : MonoBehaviour
     public GameObject talkPanel;
     public Image headImage;
     public GameObject textLabel;
+    public GameObject nameLabel;
 
     [Header("Text File")]
     public TextAsset textFile;
@@ -19,6 +20,7 @@ public class DialogSystem : MonoBehaviour
     [Header("Head Image")]
     public Sprite headPlayer;
     public Sprite headNPC;
+    public string nameNPC;
 
     bool textFinished;
     bool isTyping;
@@ -76,10 +78,12 @@ public class DialogSystem : MonoBehaviour
         {
             case "A":
                 headImage.sprite = headPlayer;
+                nameLabel.GetComponent<TMP_Text>().text = "";
                 index++;
                 break;
             case "B":
                 headImage.sprite = headNPC;
+                nameLabel.GetComponent<TMP_Text>().text = nameNPC;
                 index++;
                 break;
         }
