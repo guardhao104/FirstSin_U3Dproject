@@ -1,0 +1,11 @@
+A
+"Rare indeed, our village hasn't seen a visitor in decades. Which wind blew you here, stranger?"
+B
+"I'm just a passing traveler. Can you tell me where I am?"
+A
+"Where are you? This is a village that has long lost its name. We have been living in the shadow of the Black Flag for generations, barely surviving."
+B
+•	"The Black Flag?"
+•	"What happened, Old man?"
+A
+"You must come from a faraway land, stranger. The Black Flag is the insignia of the largest pirate gang in these parts. They hail from the greatest and most prosperous city in the West —— City of Liberty."

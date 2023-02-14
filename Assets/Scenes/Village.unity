@@ -923,7 +923,7 @@ MonoBehaviour:
   talkPanel: {fileID: 1794183731}
   headImage: {fileID: 851712289}
   textLabel: {fileID: 264740617}
-  textFile: {fileID: 4900000, guid: 594812e4fcee0bb49858a886e396d161, type: 3}
+  textFile: {fileID: 4900000, guid: 1f8bbbdb3e7a9984ebc97da90f05b614, type: 3}
   index: 0
   textSpeed: 0
   headPlayer: {fileID: 21300000, guid: affeade9874cf2347abb155e8d0db4d8, type: 3}
