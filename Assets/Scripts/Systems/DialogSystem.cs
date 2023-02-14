@@ -25,13 +25,9 @@ public class DialogSystem : MonoBehaviour
 
     List<string> textList = new List<string>();
 
-    void Awake()
-    {
-        GetTextFromFile(textFile);
-    }
-
     void OnEnable()
     {
+        GetTextFromFile(textFile);
         index = 0;
         textFinished = true;
         StartCoroutine(setTextUI());
@@ -44,7 +40,6 @@ public class DialogSystem : MonoBehaviour
             if (index == textList.Count)
             {
                 talkPanel.SetActive(false);
-                index = 0;
                 return;
             }
             else
@@ -61,7 +56,7 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
-    void GetTextFromFile(TextAsset file)
+    public void GetTextFromFile(TextAsset file)
     {
         textList.Clear();
 

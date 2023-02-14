@@ -7,6 +7,13 @@ public class NPCTalkButton : MonoBehaviour
     public GameObject Button;
     public GameObject talkUI;
 
+    [Header("Text File")]
+    public TextAsset textFile;
+
+    [Header("Head Image")]
+    public Sprite headPlayer;
+    public Sprite headNPC;
+
     private void Awake()
     {
         Button.SetActive(false);
@@ -34,6 +41,10 @@ public class NPCTalkButton : MonoBehaviour
     {
         if (Button.activeSelf && talkUI.activeSelf == false && Input.GetKeyDown(KeyCode.E))
         {
+            var dialog = talkUI.GetComponent<DialogSystem>();
+            dialog.textFile = textFile;
+            dialog.headPlayer = headPlayer;
+            dialog.headNPC = headNPC;
             talkUI.SetActive(true);
         }
     }
