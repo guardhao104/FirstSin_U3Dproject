@@ -16,6 +16,8 @@ public class CharacterController2D : MonoBehaviour
 
     public Transform farLeft;  // End of screen Left
     public Transform farRight;  //End of Screen Right
+    private float cameraLeftBorder;
+    private float cameraRightBorder;
 
     float speed = 0f;
     bool facingRight = true;
@@ -36,6 +38,24 @@ public class CharacterController2D : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
+
+        if (farLeft)
+        {
+            cameraLeftBorder = farLeft.position.x;
+        }
+        else
+        {
+            cameraLeftBorder = -Mathf.Infinity;
+        }
+
+        if (farRight)
+        {
+            cameraRightBorder = farRight.position.x;
+        }
+        else
+        {
+            cameraRightBorder = Mathf.Infinity;
+        }
 
         if (mainCamera)
         {
@@ -93,13 +113,13 @@ public class CharacterController2D : MonoBehaviour
         // Camera follow
         if (mainCamera)
         {
-            if (t.position.x > farRight.position.x)
+            if (t.position.x > cameraRightBorder)
             {
-                mainCamera.transform.position = new Vector3(farRight.position.x, cameraPos.y, cameraPos.z);
+                mainCamera.transform.position = new Vector3(cameraRightBorder, cameraPos.y, cameraPos.z);
             }
-            else if (t.position.x < farLeft.position.x)
+            else if (t.position.x < cameraLeftBorder)
             {
-                mainCamera.transform.position = new Vector3(farLeft.position.x, cameraPos.y, cameraPos.z);
+                mainCamera.transform.position = new Vector3(cameraLeftBorder, cameraPos.y, cameraPos.z);
             }
             else
             {

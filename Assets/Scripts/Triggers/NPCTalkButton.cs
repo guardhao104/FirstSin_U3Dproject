@@ -8,6 +8,7 @@ public class NPCTalkButton : MonoBehaviour
     public GameObject talkUI;
 
     [Header("Text File")]
+    public string name;
     public TextAsset textFile;
 
     [Header("Head Image")]
@@ -45,6 +46,7 @@ public class NPCTalkButton : MonoBehaviour
             dialog.textFile = textFile;
             dialog.headPlayer = headPlayer;
             dialog.headNPC = headNPC;
+            dialog.nameNPC = name;
             talkUI.SetActive(true);
         }
     }
