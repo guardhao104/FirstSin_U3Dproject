@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VillageHouse2.unity
     guid: 2355c942a05def44990d6fc99e8e04f1
+  - enabled: 1
+    path: Assets/Scenes/UnderWell.unity
+    guid: 493b986e6b3a2864dac541ed8871037e
   m_configObjects: {}
