@@ -358,8 +358,8 @@ MonoBehaviour:
   talkUI: {fileID: 1897142410}
   name: Little Girl
   textFile: {fileID: 4900000, guid: 594812e4fcee0bb49858a886e396d161, type: 3}
-  headPlayer: {fileID: 21300000, guid: 62ce01ddca719d34ea9648c586a7cc94, type: 3}
-  headNPC: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+  headPlayer: {fileID: 21300000, guid: 2ae431c65b3294a4db82a624948ffb13, type: 3}
+  headNPC: {fileID: 21300000, guid: d8dbde4b1b3c93b45859812789845974, type: 3}
 --- !u!61 &324471194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4808,8 +4808,8 @@ MonoBehaviour:
   talkUI: {fileID: 1897142410}
   name: Old Fishermen
   textFile: {fileID: 4900000, guid: 1f8bbbdb3e7a9984ebc97da90f05b614, type: 3}
-  headPlayer: {fileID: 21300000, guid: 455f5be4e3882e543b01ae69b406ab35, type: 3}
-  headNPC: {fileID: 21300000, guid: 455f5be4e3882e543b01ae69b406ab35, type: 3}
+  headPlayer: {fileID: 21300000, guid: 2ae431c65b3294a4db82a624948ffb13, type: 3}
+  headNPC: {fileID: 21300000, guid: 312f1443d4751d9449d7afab2244d66b, type: 3}
 --- !u!61 &1853595767
 BoxCollider2D:
   m_ObjectHideFlags: 0
