@@ -9,10 +9,10 @@ using UnityEngine.UI;
 
 public class NodeParser : MonoBehaviour
 {
-    public DialogueGraph[] graph;
+    // public DialogueGraph[] graph;
     public TextMeshProUGUI speaker;
     public TextMeshProUGUI dialogue;
-    public int g;
+    // public int g;
 
     public GameObject dialoguePanel;
     public GameObject buttonPrefab;
@@ -25,18 +25,33 @@ public class NodeParser : MonoBehaviour
     private ChoiceDialogueNode activeSegment;
     Coroutine _parser;
 
+    private int g;
+    private DialogueGraph graph;
+
     // public Image speakerImage;
 
     // Start is called before the first frame update
     void Start()
     {
+        dialoguePanel.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void StartDialogue(DialogueGraph dg)
+    {
+        graph = dg;
         try
         {
-            foreach (BaseNode b in graph[g].nodes)
+            foreach (BaseNode b in graph.nodes)
             {
                 if (b.GetString() == "Start")
                 {
-                    graph[g].current = b;
+                    graph.current = b;
                     break;
                 }
             }
@@ -45,25 +60,22 @@ public class NodeParser : MonoBehaviour
         {
             Debug.LogError("ERROR: DialogueGraphs are not there");
         }
-        _parser = StartCoroutine(ParseNode());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        dialoguePanel.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        NextNode("exit");  //makes sure that StartNode is not activated automatically    
     }
 
     // Choices button is pressed
     public void AnswerClicked(int clickedIndex)
     {
         buttonContainer.SetActive(false);
-        BaseNode b = graph[g].current;
+        BaseNode b = graph.current;
         var port = activeSegment.GetPort("Answers " + clickedIndex);
 
         if (port.IsConnected)
         {
-            graph[g].current = port.Connection.node as BaseNode;
+            graph.current = port.Connection.node as BaseNode;
             _parser = StartCoroutine(ParseNode());
         }
         else
@@ -99,7 +111,7 @@ public class NodeParser : MonoBehaviour
     // Node logic
     IEnumerator ParseNode()
     {
-        BaseNode b = graph[g].current;
+        BaseNode b = graph.current;
         string data = b.GetString();
         string[] dataParts = data.Split('/');
 
@@ -162,10 +174,8 @@ public class NodeParser : MonoBehaviour
 
         if (dataParts[0] == "CloseDialogue_ExitNode")
         {
-            // Player.GetComponent<InteractionInstigator>().enabled = true;
-            // Player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
             dialoguePanel.SetActive(false);
-            graph[g].Start(); //loops back to the start node
+            graph.Start(); //loops back to the start node
             speaker.text ="";
             dialogue.text = "";
             foreach (Transform child in buttonParent){
@@ -175,8 +185,6 @@ public class NodeParser : MonoBehaviour
 
         if (dataParts[0] == "CloseDialogue_ExitNode_NoLoop_toStart")
         {
-            // Player.GetComponent<InteractionInstigator>().enabled = true;
-            // Player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
             dialoguePanel.SetActive(false);
             speaker.text ="";
             dialogue.text = "";
@@ -203,13 +211,13 @@ public class NodeParser : MonoBehaviour
 
         try
         {
-            foreach (NodePort p in graph[g].current.Ports)
+            foreach (NodePort p in graph.current.Ports)
             {
                 try
                 {
                     if (p.fieldName == fieldName)
                     {
-                        graph[g].current = p.Connection.node as BaseNode;
+                        graph.current = p.Connection.node as BaseNode;
                         break;
                     }
                 }
