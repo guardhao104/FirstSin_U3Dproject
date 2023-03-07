@@ -76,6 +76,7 @@ public class CharacterController2D : MonoBehaviour
             if (isGrounded || r2d.velocity.magnitude < 0.01f)
             {
                 moveDirection = 0;
+                speed = 0;
             }
         }
 
@@ -151,6 +152,8 @@ public class CharacterController2D : MonoBehaviour
 
         // Apply movement velocity
         r2d.velocity = new Vector2((moveDirection) * speed, r2d.velocity.y);
+
+        Debug.Log("Speed: " + speed);
 
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
