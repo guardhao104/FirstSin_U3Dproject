@@ -882,6 +882,11 @@ Transform:
   m_Father: {fileID: 468468487}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &426376780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2857397119156052485, guid: 22b93692bcb9d9a408d62c6caea35d79, type: 3}
+  m_PrefabInstance: {fileID: 873334129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468468486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2181,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2857397119156052484, guid: 22b93692bcb9d9a408d62c6caea35d79, type: 3}
   m_PrefabInstance: {fileID: 873334129}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &831853903
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426376780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6219c354235a524aab497f0b8dea7f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &852869367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4762,6 +4787,7 @@ GameObject:
   - component: {fileID: 1853595768}
   - component: {fileID: 1853595767}
   - component: {fileID: 1853595766}
+  - component: {fileID: 1853595769}
   m_Layer: 0
   m_Name: NPC_1_FisherMen
   m_TagString: Untagged
@@ -4830,6 +4856,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1853595769
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853595765}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79f8b5eeda4b7ab41acb9da60ff0d561, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1885749616
 GameObject:
   m_ObjectHideFlags: 0
