@@ -12,6 +12,7 @@ public class NodeParser : MonoBehaviour
     [Header("Player")]
     public GameObject player;
     public Sprite playerImage;
+    public Sprite libraryImage;
 
     [Header("UI Component")]
     public GameObject dialoguePanel;
@@ -203,6 +204,48 @@ public class NodeParser : MonoBehaviour
             }
 
             yield return new WaitUntil(() => (dialoguePanel.activeSelf));
+            yield return new WaitUntil(() => (textFinished));
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); //waits for left mouse click input then goes to next node
+            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+            NextNode("exit");
+        }
+
+        if (dataParts[0] == "LibraryDialogueNode")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            headImage.sprite = libraryImage;
+            headImage.enabled = true;
+            speakerNameText.text = "The Great Library";
+            StartCoroutine(setTextUI(dataParts[1]));
+
+            if (dialogueText.text == "")
+            {
+                Debug.LogError("ERROR: Dialogue text for LibraryDialogueNode is empty");
+            }
+
+            yield return new WaitUntil(() => (dialoguePanel.activeSelf));
+            yield return new WaitUntil(() => (textFinished));
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); //waits for left mouse click input then goes to next node
+            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+            NextNode("exit");
+        }
+
+        if (dataParts[0] == "DescriptionNode")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            headImage.enabled = false;
+            speakerNameText.text = "";
+            StartCoroutine(setTextUI(dataParts[1]));
+
+            if (dialogueText.text == "")
+            {
+                Debug.LogError("ERROR: Dialogue text for DescriptionNode is empty");
+            }
+
+            yield return new WaitUntil(() => (dialoguePanel.activeSelf));
+            yield return new WaitUntil(() => (textFinished));
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); //waits for left mouse click input then goes to next node
             yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
             NextNode("exit");
