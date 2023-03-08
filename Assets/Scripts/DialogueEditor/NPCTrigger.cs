@@ -6,17 +6,25 @@ public class NPCTrigger : MonoBehaviour
 {
     public GameObject Button;
 
+    public Sprite headImage;
     public int graphNumber = 0;
     public DialogueGraph[] graph;
 
     private GameObject player;
+    private GameObject dialoguePanel;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+        dialoguePanel = GameObject.Find("DialoguePanel");
+        Button.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             Button.SetActive(true);
-            player = collision.gameObject;
         }
     }
 
@@ -30,10 +38,10 @@ public class NPCTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Button.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (Button.activeSelf && dialoguePanel.activeSelf == false && Input.GetKeyDown(KeyCode.E))
         {
             NodeParser dialogueNum = player.GetComponent<NodeParser>();
-            dialogueNum.StartDialogue(graph[graphNumber]);
+            dialogueNum.StartDialogue(graph[graphNumber], headImage);
         }
     }
 }

@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7973402759682305289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -344, y: 216}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -7973402759682305289}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -6475054536747880825}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7973402759682305289}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5113847504865410858}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Hi old man!
 --- !u!114 &-6475054536747880825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +57,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -424, y: 8}
+  position: {x: -488, y: 8}
   ports:
     keys:
     - input
@@ -37,7 +81,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5113847504865410858}
+        node: {fileID: -7973402759682305289}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -66,6 +110,7 @@ MonoBehaviour:
   - {fileID: 1171522943720175847}
   - {fileID: 2264621787465342180}
   - {fileID: 5650799045902769572}
+  - {fileID: -7973402759682305289}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -289,7 +334,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -6475054536747880825}
+        node: {fileID: -7973402759682305289}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
