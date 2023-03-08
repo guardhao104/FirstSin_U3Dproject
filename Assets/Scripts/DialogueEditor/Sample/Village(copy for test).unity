@@ -3222,6 +3222,7 @@ MonoBehaviour:
   buttonContainer: {fileID: 1061575036}
   buttonParent: {fileID: 1061575037}
   buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
+  textDisplaySpeed: 0.01
 --- !u!1 &1005703509
 GameObject:
   m_ObjectHideFlags: 0

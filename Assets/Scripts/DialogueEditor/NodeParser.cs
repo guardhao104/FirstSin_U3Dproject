@@ -22,6 +22,11 @@ public class NodeParser : MonoBehaviour
     public Transform buttonParent;
     public GameObject buttonPrefab;
 
+    [Header("Text Display")]
+    public float textDisplaySpeed;
+
+    private bool textFinished;
+
     private ChoiceDialogueNode activeSegment;
     Coroutine _parser;
 
@@ -129,7 +134,7 @@ public class NodeParser : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            speakerNameText.text ="";
+            speakerNameText.text = "";
             dialogueText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
@@ -146,8 +151,9 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = npcImage;
             headImage.enabled = true;
             speakerNameText.text = dataParts[1];
-            dialogueText.text = dataParts[2];
+            StartCoroutine(setTextUI(dataParts[2]));
 
+            yield return new WaitUntil(() => (textFinished));
             UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons 
 
             if(speakerNameText.text == ""){
@@ -165,7 +171,7 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = npcImage;
             headImage.enabled = true;
             speakerNameText.text = dataParts[1];
-            dialogueText.text = dataParts[2];
+            StartCoroutine(setTextUI(dataParts[2]));
             
 
             if(speakerNameText.text == ""){
@@ -175,7 +181,8 @@ public class NodeParser : MonoBehaviour
                 Debug.LogError("ERROR: Dialogue text for DialogueNode is empty");
             }
             
-            yield return new WaitUntil(() => (dialoguePanel.activeSelf)); 
+            yield return new WaitUntil(() => (dialoguePanel.activeSelf));
+            yield return new WaitUntil(() => (textFinished));
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); //waits for left mouse click input then goes to next node
             yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
             NextNode("exit");
@@ -188,7 +195,7 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = playerImage;
             headImage.enabled = true;
             speakerNameText.text = "";
-            dialogueText.text = dataParts[1];
+            StartCoroutine(setTextUI(dataParts[1]));
 
             if (dialogueText.text == "")
             {
@@ -268,5 +275,26 @@ public class NodeParser : MonoBehaviour
         }
 
         _parser = StartCoroutine(ParseNode());
+    }
+
+    IEnumerator setTextUI(string text)
+    {
+        textFinished = false;
+        dialogueText.text = "";
+
+        int word = 0;
+        while (word < text.Length - 1)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                break;
+            }
+            dialogueText.text += text[word];
+            word++;
+            yield return new WaitForSeconds(textDisplaySpeed);
+        }
+
+        dialogueText.text = text;
+        textFinished = true;
     }
 }
