@@ -11,10 +11,11 @@ public class CharacterController2D1 : MonoBehaviour
     // Move player in 2D space
     public float walkSpeed = 5.0f;
     public float runSpeed = 10.0f;
-    public float jumpHeight = 6.5f;
+    public float jumpHeight = 0.0f;
     public float gravityScale = 1.5f;
     public Camera mainCamera;
 
+    // camera border
     public Transform farLeft;  // End of screen Left
     public Transform farRight;  //End of Screen Right
 
@@ -23,8 +24,10 @@ public class CharacterController2D1 : MonoBehaviour
     public AnimationReferenceAsset idle;
     public AnimationReferenceAsset walking;
     public AnimationReferenceAsset running;
-    public string currentState;
-    public string currentAnimation;
+
+    // animation state
+    private string currentState;
+    private string currentAnimation;
 
     private float cameraLeftBorder;
     private float cameraRightBorder;
@@ -208,15 +211,16 @@ public class CharacterController2D1 : MonoBehaviour
     }
 
     // Move player and trigger animation (Joshua)
-    public void Move()
+    private void Move()
     {
-        r2d.velocity = new Vector2((moveDirection) * speed, r2d.velocity.y);
+        var v = new Vector2((moveDirection) * speed, r2d.velocity.y);
+        r2d.velocity = v;
 
-        if (speed == runSpeed)
+        if (Mathf.Abs(v.x) == runSpeed)
         {
             SetCharacterState("Running");
         }
-        else if (speed == walkSpeed)
+        else if (Mathf.Abs(v.x) == walkSpeed)
         {
             SetCharacterState("Walking");
         }
@@ -226,4 +230,6 @@ public class CharacterController2D1 : MonoBehaviour
             speed = 0;
         }
     }
+
+
 }

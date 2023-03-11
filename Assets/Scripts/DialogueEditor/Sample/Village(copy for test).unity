@@ -285,7 +285,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1794183732}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -916,7 +916,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1794183732}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1837,7 +1837,6 @@ GameObject:
   - component: {fileID: 532188343}
   - component: {fileID: 532188342}
   - component: {fileID: 532188341}
-  - component: {fileID: 532188344}
   - component: {fileID: 532188345}
   m_Layer: 0
   m_Name: NPC1
@@ -1930,24 +1929,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &532188344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532188340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7b406deec2c92742bb13cc4caa54ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 2000065865}
-  talkUI: {fileID: 1794183731}
-  name: Old Fishermen
-  textFile: {fileID: 4900000, guid: 1f8bbbdb3e7a9984ebc97da90f05b614, type: 3}
-  headPlayer: {fileID: 21300000, guid: affeade9874cf2347abb155e8d0db4d8, type: 3}
-  headNPC: {fileID: 21300000, guid: 0029170d14ce6c04c9f45c22cdae5559, type: 3}
 --- !u!114 &532188345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,6 +1942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 2000065865}
+  headImage: {fileID: 21300000, guid: 312f1443d4751d9449d7afab2244d66b, type: 3}
   graphNumber: 0
   graph:
   - {fileID: 11400000, guid: 03d070a4a3d9f4946ad15aaab1d8500b, type: 2}
@@ -2689,7 +2671,7 @@ GameObject:
   - component: {fileID: 851712290}
   - component: {fileID: 851712289}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Head Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3231,13 +3213,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc47b3ea1fade947bc05a743e45b188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speaker: {fileID: 60602547}
-  dialogue: {fileID: 264740619}
-  dialoguePanel: {fileID: 1794183731}
-  buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
-  buttonContainer: {fileID: 1061575036}
   player: {fileID: 987921561}
+  playerImage: {fileID: 21300000, guid: 2ae431c65b3294a4db82a624948ffb13, type: 3}
+  libraryImage: {fileID: 21300000, guid: d8dbde4b1b3c93b45859812789845974, type: 3}
+  dialoguePanel: {fileID: 1794183731}
+  headImage: {fileID: 851712289}
+  speakerNameText: {fileID: 60602547}
+  dialogueText: {fileID: 264740619}
+  buttonContainer: {fileID: 1061575036}
   buttonParent: {fileID: 1061575037}
+  buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
+  textDisplaySpeed: 0.01
 --- !u!1 &1005703509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,7 +4595,6 @@ GameObject:
   - component: {fileID: 1564649043}
   - component: {fileID: 1564649042}
   - component: {fileID: 1564649041}
-  - component: {fileID: 1564649044}
   - component: {fileID: 1564649045}
   m_Layer: 0
   m_Name: NPC3DiveMaster
@@ -4712,24 +4697,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1564649044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564649040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7b406deec2c92742bb13cc4caa54ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 974396133}
-  talkUI: {fileID: 1794183731}
-  name: Dive Master
-  textFile: {fileID: 4900000, guid: 8ece52a3d5a95964e9698a1c093e7b90, type: 3}
-  headPlayer: {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
-  headNPC: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
 --- !u!114 &1564649045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4743,6 +4710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 974396133}
+  headImage: {fileID: 21300000, guid: d8dbde4b1b3c93b45859812789845974, type: 3}
   graphNumber: 0
   graph:
   - {fileID: 11400000, guid: 7494c30bb1d2ae94ea52cea85045e4d5, type: 2}
@@ -5095,9 +5063,8 @@ GameObject:
   - component: {fileID: 1794183732}
   - component: {fileID: 1794183734}
   - component: {fileID: 1794183733}
-  - component: {fileID: 1794183735}
   m_Layer: 5
-  m_Name: DialogPanel
+  m_Name: DialoguePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5116,8 +5083,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 851712288}
-  - {fileID: 264740618}
   - {fileID: 60602549}
+  - {fileID: 264740618}
   - {fileID: 1061575037}
   m_Father: {fileID: 753279733}
   m_RootOrder: 0
@@ -5165,28 +5132,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794183731}
   m_CullTransparentMesh: 1
---- !u!114 &1794183735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794183731}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a8aed7aacbf934fb7155b8ccc4fd68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talkPanel: {fileID: 1794183731}
-  headImage: {fileID: 851712289}
-  textLabel: {fileID: 264740617}
-  nameLabel: {fileID: 60602546}
-  textFile: {fileID: 4900000, guid: fb0d27e6af3440b47b868584e92eafb8, type: 3}
-  index: 0
-  textSpeed: 0
-  headPlayer: {fileID: 0}
-  headNPC: {fileID: 0}
-  nameNPC: 
 --- !u!1 &1834466389
 GameObject:
   m_ObjectHideFlags: 0
