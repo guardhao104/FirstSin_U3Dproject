@@ -1041,6 +1041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1752384526}
   scenename: UnderWell
+  playerDestination: 
 --- !u!61 &478017075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2041,6 +2042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 638438624}
   scenename: VillageHouse1
+  playerDestination: 
 --- !u!61 &761862857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4813,6 +4815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1971367158}
   scenename: VillageHouse2
+  playerDestination: 
 --- !u!61 &2038872057
 BoxCollider2D:
   m_ObjectHideFlags: 0
