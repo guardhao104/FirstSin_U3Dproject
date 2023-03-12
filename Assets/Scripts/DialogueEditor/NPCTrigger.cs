@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCTrigger : MonoBehaviour
 {
-    public GameObject Button;
+    public Image icon;
+
+    public static bool newDialoge = true;
 
     public Sprite headImage;
+    public Sprite newDialogeIcon;
+    public Sprite repeatDialogeIcon;
+
     public int graphNumber = 0;
     public DialogueGraph[] graph;
 
@@ -17,14 +23,25 @@ public class NPCTrigger : MonoBehaviour
     {
         player = GameObject.Find("Player");
         dialoguePanel = GameObject.Find("DialoguePanel");
-        Button.SetActive(false);
+
+        if(newDialoge)
+        {
+            icon.sprite = newDialogeIcon;
+        }
+        else
+        {
+            icon.sprite = repeatDialogeIcon;
+        }
+
+        icon.enabled = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Button.SetActive(true);
+           icon.enabled = true;
         }
     }
 
@@ -32,16 +49,27 @@ public class NPCTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Button.SetActive(false);
+            icon.enabled = false;
         }
     }
 
     void Update()
     {
-        if (Button.activeSelf && dialoguePanel.activeSelf == false && Input.GetKeyDown(KeyCode.E))
+        if (icon.enabled && dialoguePanel.activeSelf == false && Input.GetKeyDown(KeyCode.E))
         {
             NodeParser dialogueNum = player.GetComponent<NodeParser>();
             dialogueNum.StartDialogue(graph[graphNumber], headImage);
+            
+            if(graph.Length == graphNumber + 1)
+            {
+                newDialoge = false;
+                icon.sprite = repeatDialogeIcon;
+            }
+            else
+            {
+                graphNumber++;
+                icon.sprite = newDialogeIcon;
+            }
         }
     }
 }
