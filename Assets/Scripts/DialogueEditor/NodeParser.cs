@@ -144,6 +144,25 @@ public class NodeParser : MonoBehaviour
             }
         }
 
+        if (dataParts[0] == "SetFlagNode")
+        {
+            GameManager.player.SetFlag(dataParts[1], dataParts[2] == "True");
+            NextNode("exit");
+        }
+
+        if (dataParts[0] == "GetFlagNode")
+        {
+            bool flag = GameManager.player.GetFlag(dataParts[1]);
+            if (flag)
+            {
+                NextNode("trueExit");
+            }
+            else
+            {
+                NextNode("falseExit");
+            }
+        }
+
         if (dataParts[0] == "ChoiceDialogueNode")
         {
             Cursor.visible = true;
