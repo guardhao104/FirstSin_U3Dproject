@@ -17,8 +17,10 @@ public class NodeParser : MonoBehaviour
     [Header("UI Component")]
     public GameObject dialoguePanel;
     public Image headImage;
+    public Image headImageBorder;
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI descriptionText;
     public GameObject buttonContainer;
     public Transform buttonParent;
     public GameObject buttonPrefab;
@@ -124,8 +126,10 @@ public class NodeParser : MonoBehaviour
 
         speakerNameText.text = "";
         dialogueText.text = "";
+        descriptionText.text = "";
         headImage.sprite = null;
         headImage.enabled = false;
+        headImageBorder.enabled = false;
 
         foreach (Transform child in buttonParent)
         {
@@ -138,8 +142,10 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             speakerNameText.text = "";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
             }
@@ -171,6 +177,7 @@ public class NodeParser : MonoBehaviour
             buttonContainer.SetActive(true);
             headImage.sprite = npcImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = dataParts[1];
             StartCoroutine(setTextUI(dataParts[2]));
 
@@ -191,6 +198,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = npcImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = dataParts[1];
             StartCoroutine(setTextUI(dataParts[2]));
             
@@ -215,6 +223,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = playerImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = "";
             StartCoroutine(setTextUI(dataParts[1]));
 
@@ -236,6 +245,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = libraryImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = "The Great Library";
             StartCoroutine(setTextUI(dataParts[1]));
 
@@ -256,8 +266,9 @@ public class NodeParser : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             speakerNameText.text = "";
-            StartCoroutine(setTextUI(dataParts[1]));
+            StartCoroutine(setDescriptionTextUI(dataParts[1]));
 
             if (dialogueText.text == "")
             {
@@ -278,8 +289,10 @@ public class NodeParser : MonoBehaviour
             graph.Start(); //loops back to the start node
             speakerNameText.text ="";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
             }
@@ -291,8 +304,10 @@ public class NodeParser : MonoBehaviour
             GameManager.player.Interactive = true;
             speakerNameText.text ="";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
             }
@@ -303,8 +318,10 @@ public class NodeParser : MonoBehaviour
     {
         speakerNameText.text ="";
         dialogueText.text = "";
+        descriptionText.text = "";
         headImage.sprite = null;
         headImage.enabled = false;
+        headImageBorder.enabled = false;
         foreach (Transform child in buttonParent)
         {
             Destroy(child.gameObject);
@@ -360,6 +377,27 @@ public class NodeParser : MonoBehaviour
         }
 
         dialogueText.text = text;
+        textFinished = true;
+    }
+
+    IEnumerator setDescriptionTextUI(string text)
+    {
+        textFinished = false;
+        descriptionText.text = "";
+
+        int word = 0;
+        while (word < text.Length - 1)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                break;
+            }
+            descriptionText.text += text[word];
+            word++;
+            yield return new WaitForSeconds(textDisplaySpeed);
+        }
+
+        descriptionText.text = text;
         textFinished = true;
     }
 }
