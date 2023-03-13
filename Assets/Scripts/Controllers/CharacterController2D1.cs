@@ -41,9 +41,12 @@ public class CharacterController2D1 : MonoBehaviour
     CapsuleCollider2D mainCollider;
     Transform t;
 
+    private bool canMove;
+
     // Use this for initialization
     void Start()
     {
+        GameManager.player.Interactive = true;
         t = transform;
         r2d = GetComponent<Rigidbody2D>();
         mainCollider = GetComponent<CapsuleCollider2D>();
@@ -83,8 +86,10 @@ public class CharacterController2D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        canMove = GameManager.player.Interactive;
+
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if (canMove && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
         }
@@ -97,7 +102,7 @@ public class CharacterController2D1 : MonoBehaviour
         }
 
         // Run/walk switch
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (canMove && Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
         }
@@ -111,7 +116,7 @@ public class CharacterController2D1 : MonoBehaviour
         }
 
         // Change facing direction
-        if (moveDirection != 0)
+        if (canMove && moveDirection != 0)
         {
             if (moveDirection > 0 && !facingRight)
             {
@@ -126,7 +131,7 @@ public class CharacterController2D1 : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (canMove && Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
         }

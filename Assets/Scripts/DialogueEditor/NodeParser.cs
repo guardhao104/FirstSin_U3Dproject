@@ -69,6 +69,7 @@ public class NodeParser : MonoBehaviour
         dialoguePanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        GameManager.player.Interactive = false;
         NextNode("exit");  //makes sure that StartNode is not activated automatically    
     }
 
@@ -273,6 +274,7 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "CloseDialogue_ExitNode")
         {
             dialoguePanel.SetActive(false);
+            GameManager.player.Interactive = true;
             graph.Start(); //loops back to the start node
             speakerNameText.text ="";
             dialogueText.text = "";
@@ -286,6 +288,7 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "CloseDialogue_ExitNode_NoLoop_toStart")
         {
             dialoguePanel.SetActive(false);
+            GameManager.player.Interactive = true;
             speakerNameText.text ="";
             dialogueText.text = "";
             headImage.sprite = null;

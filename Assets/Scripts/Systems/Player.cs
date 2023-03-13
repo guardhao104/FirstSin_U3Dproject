@@ -9,6 +9,15 @@ public class Player
     // public int Experience;
     // public float Money;
 
+    // Enable/disable player's interactive behaviours
+    private bool interactive;
+    public bool Interactive
+    {
+        get { return interactive; }
+        set { interactive = value; }
+    }
+
+    // Data container of player's event flags
     public Dictionary<string, bool> playerFlags = new Dictionary<string, bool>();
 
     public void SetFlag(string key, bool value)
