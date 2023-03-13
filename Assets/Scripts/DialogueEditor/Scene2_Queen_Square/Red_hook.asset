@@ -68,10 +68,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   Answers:
-  - "\u2022\t\"I'm sorry, I'm not familiar with the traditions of this city. Can
-    you tell me more about this statue and her story?\""
-  - '"I do not care about your threats, nor do I have any interest in your traditions.
-    I have come here for a more important matter."'
+  - I'm sorry, I'm not familiar with the traditions of this city. Can you tell me
+    more about this statue and her story?
+  - I do not care about your threats, nor do I have any interest in your traditions.
+    I have come here for a more important matter.
   speakerName: Player
   DialogueText: You must respond to this guy one way or another.
 --- !u!114 &-8420970510899063642
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 519.3479, y: 184.11395}
+  position: {x: 488, y: 168}
   ports:
     keys:
     - input
@@ -110,8 +110,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 5151414851819935374}
+      - fieldName: input
+        node: {fileID: -4458078881462949322}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -121,14 +121,56 @@ MonoBehaviour:
     to our beloved Queen,\" the gruff pirate snarls. \"The vast and unforgiving ocean
     will become your grave. May the relentless winds tear apart your sails, and may
     the ferocious sharks revel in the taste of your flesh and blood.\"\r\n"
-  dialogueLine: '
-
-    "You ignorant outsider, showing such brazen disrespect to
-    our beloved Queen," the gruff pirate snarls. "The vast and unforgiving ocean
-    will become your grave. May the relentless winds tear apart your sails, and may
-    the ferocious sharks revel in the taste of your flesh and blood."
-
-'
+  dialogueLine: You ignorant outsider, showing such brazen disrespect to our supreme
+    Queen. The vast and merciless ocean will become your grave. May the relentless
+    winds tear apart your sails, and the ferocious sharks revel in your flesh and
+    blood.
+--- !u!114 &-4458078881462949322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 831.1976, y: 204.55676}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -4458078881462949322}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -8420970510899063642}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4458078881462949322}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 5151414851819935374}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: The pirate's warning and threats are laced with a sense of danger,
+    as if you have unknowingly violated some taboo. It is clear that lingering here
+    any longer would not be wise.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +191,8 @@ MonoBehaviour:
   - {fileID: 4925714435923972839}
   - {fileID: -8420970510899063642}
   - {fileID: 435173808299508532}
+  - {fileID: 3197327056568543477}
+  - {fileID: -4458078881462949322}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -165,7 +209,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 549.3479, y: -13.88604}
+  position: {x: 488, y: -40}
   ports:
     keys:
     - input
@@ -188,8 +232,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 5151414851819935374}
+      - fieldName: input
+        node: {fileID: 3197327056568543477}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -247,6 +291,53 @@ MonoBehaviour:
     you are the first to lay eyes upon the Queen''s statue without paying proper
     respects. Take heed, and stray not from the tradition, lest your body be found
     in the rancid waters of Blackwater Bay come the following morning."'
+--- !u!114 &3197327056568543477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 808, y: -8}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 3197327056568543477}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 435173808299508532}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3197327056568543477}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 5151414851819935374}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: The pirate's voice drips with pride and a sense of ownership that
+    is difficult to fathom coming from a pirate's lips. You cannot help but wonder
+    what kind of extraordinary tale lies behind the legend of this Pirate Queen.
+    There must be a reason why so many pirates revere her with such fervor and devotion.
 --- !u!114 &4483593334745629578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +428,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 808, y: 152}
+  position: {x: 1096, y: 152}
   ports:
     keys:
     - entry
@@ -348,10 +439,10 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -8420970510899063642}
+        node: {fileID: 3197327056568543477}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: 435173808299508532}
+        node: {fileID: -4458078881462949322}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

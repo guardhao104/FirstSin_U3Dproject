@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 488, y: -40}
+  position: {x: 312, y: -56}
   ports:
     keys:
     - input
@@ -47,6 +47,128 @@ MonoBehaviour:
   dialogueLine: "The shattered soul responded intermittently, \r\n\"They are chasing
     me; I am covered in blood. Queen is trying to eliminate anyone who disobeys her.
     I have nowhere to run, this is my end\"\r\n"
+--- !u!114 &-5337160324594204145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: -104}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: -5337160324594204145}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -2889809340752309358}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 1927123238269669135}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -5337160324594204145}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -5337160324594204145}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 1604773165665484919}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: -5337160324594204145}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -2889809340752309358}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - As the Archmage, you clearly possess a vast knowledge of spells. It would be
+    fitting to converse with the dead now.
+  - Never mind, let the poor man be.
+  speakerName: Great Library
+  DialogueText: He is a pitiful man, but in your eyes, his soul has not yet dissipated.
+    Perhaps he still has some use to you.
+--- !u!114 &-2889809340752309358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 72, y: 152}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -2889809340752309358}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: -5337160324594204145}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2889809340752309358}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5337160324594204145}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: You suddenly feel as though you may have overlooked something important,
+    and decide to take a step back and reevaluate your approach.
 --- !u!114 &-452074684588974803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +182,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -344, y: -8}
+  position: {x: -952, y: 8}
   ports:
     keys:
     - exit
@@ -71,7 +193,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4447808676262512831}
+        node: {fileID: 1927123238269669135}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -92,11 +214,13 @@ MonoBehaviour:
   nodes:
   - {fileID: -452074684588974803}
   - {fileID: 1663160429078742138}
-  - {fileID: 4447808676262512831}
   - {fileID: 1604773165665484919}
   - {fileID: -7056890537020442941}
+  - {fileID: -5337160324594204145}
+  - {fileID: -2889809340752309358}
+  - {fileID: 1927123238269669135}
   start: {fileID: 0}
-  current: {fileID: 0}
+  current: {fileID: -5337160324594204145}
   initNode: {fileID: 0}
 --- !u!114 &1604773165665484919
 MonoBehaviour:
@@ -111,7 +235,7 @@ MonoBehaviour:
   m_Name: Player Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 216, y: -40}
+  position: {x: 40, y: -72}
   ports:
     keys:
     - input
@@ -122,8 +246,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: exit
-        node: {fileID: 4447808676262512831}
+      - fieldName: Answers 0
+        node: {fileID: -5337160324594204145}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -178,7 +302,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
---- !u!114 &4447808676262512831
+--- !u!114 &1927123238269669135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,18 +311,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
-  m_Name: Description
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -56, y: -40}
+  position: {x: -664, y: -40}
   ports:
     keys:
     - input
     - exit
     values:
     - _fieldName: input
-      _node: {fileID: 4447808676262512831}
+      _node: {fileID: 1927123238269669135}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -210,17 +334,17 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: exit
-      _node: {fileID: 4447808676262512831}
+      _node: {fileID: 1927123238269669135}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1604773165665484919}
+        node: {fileID: -5337160324594204145}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  descriptionText: This skeleton seems to have been here for over a hundred years.
+  dialogueLine: 'This skeleton seems to have been here for over a hundred years.
     Judging by the marks on its ribcage, its owner suffered a heavy blow before succumbing
-    to death at this very spot.
+    to death at this very spot. '
