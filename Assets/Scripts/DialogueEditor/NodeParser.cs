@@ -270,9 +270,9 @@ public class NodeParser : MonoBehaviour
             speakerNameText.text = "";
             StartCoroutine(setDescriptionTextUI(dataParts[1]));
 
-            if (dialogueText.text == "")
+            if (descriptionText.text == "")
             {
-                Debug.LogError("ERROR: Dialogue text for DescriptionNode is empty");
+                Debug.LogError("ERROR: Description text for DescriptionNode is empty");
             }
 
             yield return new WaitUntil(() => (dialoguePanel.activeSelf));
