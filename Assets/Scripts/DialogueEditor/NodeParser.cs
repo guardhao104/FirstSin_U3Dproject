@@ -17,8 +17,10 @@ public class NodeParser : MonoBehaviour
     [Header("UI Component")]
     public GameObject dialoguePanel;
     public Image headImage;
+    public Image headImageBorder;
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI descriptionText;
     public GameObject buttonContainer;
     public Transform buttonParent;
     public GameObject buttonPrefab;
@@ -69,6 +71,7 @@ public class NodeParser : MonoBehaviour
         dialoguePanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        GameManager.player.Interactive = false;
         NextNode("exit");  //makes sure that StartNode is not activated automatically    
     }
 
@@ -123,8 +126,10 @@ public class NodeParser : MonoBehaviour
 
         speakerNameText.text = "";
         dialogueText.text = "";
+        descriptionText.text = "";
         headImage.sprite = null;
         headImage.enabled = false;
+        headImageBorder.enabled = false;
 
         foreach (Transform child in buttonParent)
         {
@@ -137,10 +142,31 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             speakerNameText.text = "";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
+            }
+        }
+
+        if (dataParts[0] == "SetFlagNode")
+        {
+            GameManager.player.SetFlag(dataParts[1], dataParts[2] == "True");
+            NextNode("exit");
+        }
+
+        if (dataParts[0] == "GetFlagNode")
+        {
+            bool flag = GameManager.player.GetFlag(dataParts[1]);
+            if (flag)
+            {
+                NextNode("trueExit");
+            }
+            else
+            {
+                NextNode("falseExit");
             }
         }
 
@@ -151,6 +177,7 @@ public class NodeParser : MonoBehaviour
             buttonContainer.SetActive(true);
             headImage.sprite = npcImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = dataParts[1];
             StartCoroutine(setTextUI(dataParts[2]));
 
@@ -171,6 +198,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = npcImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = dataParts[1];
             StartCoroutine(setTextUI(dataParts[2]));
             
@@ -195,6 +223,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = playerImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = "";
             StartCoroutine(setTextUI(dataParts[1]));
 
@@ -216,6 +245,7 @@ public class NodeParser : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             headImage.sprite = libraryImage;
             headImage.enabled = true;
+            headImageBorder.enabled = true;
             speakerNameText.text = "The Great Library";
             StartCoroutine(setTextUI(dataParts[1]));
 
@@ -236,8 +266,9 @@ public class NodeParser : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             speakerNameText.text = "";
-            StartCoroutine(setTextUI(dataParts[1]));
+            StartCoroutine(setDescriptionTextUI(dataParts[1]));
 
             if (dialogueText.text == "")
             {
@@ -254,11 +285,14 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "CloseDialogue_ExitNode")
         {
             dialoguePanel.SetActive(false);
+            GameManager.player.Interactive = true;
             graph.Start(); //loops back to the start node
             speakerNameText.text ="";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
             }
@@ -267,10 +301,13 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "CloseDialogue_ExitNode_NoLoop_toStart")
         {
             dialoguePanel.SetActive(false);
+            GameManager.player.Interactive = true;
             speakerNameText.text ="";
             dialogueText.text = "";
+            descriptionText.text = "";
             headImage.sprite = null;
             headImage.enabled = false;
+            headImageBorder.enabled = false;
             foreach (Transform child in buttonParent){
                 Destroy(child.gameObject);
             }
@@ -281,8 +318,10 @@ public class NodeParser : MonoBehaviour
     {
         speakerNameText.text ="";
         dialogueText.text = "";
+        descriptionText.text = "";
         headImage.sprite = null;
         headImage.enabled = false;
+        headImageBorder.enabled = false;
         foreach (Transform child in buttonParent)
         {
             Destroy(child.gameObject);
@@ -338,6 +377,27 @@ public class NodeParser : MonoBehaviour
         }
 
         dialogueText.text = text;
+        textFinished = true;
+    }
+
+    IEnumerator setDescriptionTextUI(string text)
+    {
+        textFinished = false;
+        descriptionText.text = "";
+
+        int word = 0;
+        while (word < text.Length - 1)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                break;
+            }
+            descriptionText.text += text[word];
+            word++;
+            yield return new WaitForSeconds(textDisplaySpeed);
+        }
+
+        descriptionText.text = text;
         textFinished = true;
     }
 }

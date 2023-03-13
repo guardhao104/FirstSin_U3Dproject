@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Choice Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 200, y: -88}
+  position: {x: 232, y: -40}
   ports:
     keys:
     - input
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: Description
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 831.1976, y: 204.55676}
+  position: {x: 776, y: 200}
   ports:
     keys:
     - input
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: Description
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 808, y: -8}
+  position: {x: 776, y: 8}
   ports:
     keys:
     - input
