@@ -4258,8 +4258,10 @@ MonoBehaviour:
   libraryImage: {fileID: 21300000, guid: 69f9f8297865d0447aaf5829cbc8be57, type: 3}
   dialoguePanel: {fileID: 823550463}
   headImage: {fileID: 352751379}
+  headImageBorder: {fileID: 1292481495}
   speakerNameText: {fileID: 1228009597}
   dialogueText: {fileID: 66381848}
+  descriptionText: {fileID: 1292481494}
   buttonContainer: {fileID: 56845492}
   buttonParent: {fileID: 56845493}
   buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
@@ -4361,6 +4363,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
+--- !u!114 &1292481494 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3701486991161104721, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
+  m_PrefabInstance: {fileID: 1292481493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1292481495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3701486990877907277, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
+  m_PrefabInstance: {fileID: 1292481493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302300224
 GameObject:
   m_ObjectHideFlags: 0

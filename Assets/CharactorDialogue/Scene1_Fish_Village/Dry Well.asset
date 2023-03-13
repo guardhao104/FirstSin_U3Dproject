@@ -74,10 +74,10 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -2889809340752309358}
+        node: {fileID: 1927123238269669135}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: 1927123238269669135}
+        node: {fileID: -2988100609546141084}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -2889809340752309358}
+        node: {fileID: -2988100609546141084}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   speakerName: Great Library
   DialogueText: He is a pitiful man, but in your eyes, his soul has not yet dissipated.
     Perhaps he still has some use to you.
---- !u!114 &-2889809340752309358
+--- !u!114 &-2988100609546141084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,18 +133,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
-  m_Name: Player Dialogue
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 72, y: 152}
+  position: {x: -8, y: 184}
   ports:
     keys:
     - input
     - exit
     values:
     - _fieldName: input
-      _node: {fileID: -2889809340752309358}
+      _node: {fileID: -2988100609546141084}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -156,7 +156,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: exit
-      _node: {fileID: -2889809340752309358}
+      _node: {fileID: -2988100609546141084}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -167,8 +167,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: You suddenly feel as though you may have overlooked something important,
-    and decide to take a step back and reevaluate your approach.
+  descriptionText: The old man pointed you towards the direction of the City of Liberty,
+    a bustling metropolis located to the south of the continent.
 --- !u!114 &-452074684588974803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,10 +217,10 @@ MonoBehaviour:
   - {fileID: 1604773165665484919}
   - {fileID: -7056890537020442941}
   - {fileID: -5337160324594204145}
-  - {fileID: -2889809340752309358}
   - {fileID: 1927123238269669135}
+  - {fileID: -2988100609546141084}
   start: {fileID: 0}
-  current: {fileID: -5337160324594204145}
+  current: {fileID: 0}
   initNode: {fileID: 0}
 --- !u!114 &1604773165665484919
 MonoBehaviour:
