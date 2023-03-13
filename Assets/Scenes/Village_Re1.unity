@@ -463,7 +463,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 9.8}
+  m_Size: {x: 1, y: 9.8}
   m_EdgeRadius: 0
 --- !u!4 &324471195
 Transform:
@@ -6184,7 +6184,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.18, y: 9.58}
+  m_Size: {x: 1, y: 9.58}
   m_EdgeRadius: 0
 --- !u!4 &1853595768
 Transform:
@@ -6222,7 +6222,7 @@ MonoBehaviour:
   graphNumber: 0
   graph:
   - {fileID: 11400000, guid: 4f087ee92abff6f4cb7976a9bd2dd5c9, type: 2}
-  - {fileID: 11400000, guid: 31ea13b5042a5464784519037cc412f5, type: 2}
+  - {fileID: 11400000, guid: 44746fec4e9328f4888bf6ac3e96779f, type: 2}
 --- !u!1 &1885749616
 GameObject:
   m_ObjectHideFlags: 0
