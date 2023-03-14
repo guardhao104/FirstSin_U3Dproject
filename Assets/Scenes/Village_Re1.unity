@@ -3239,6 +3239,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22b93692bcb9d9a408d62c6caea35d79, type: 3}
+--- !u!1 &873334130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2857397119156052485, guid: 22b93692bcb9d9a408d62c6caea35d79, type: 3}
+  m_PrefabInstance: {fileID: 873334129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &873334131
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873334130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6219c354235a524aab497f0b8dea7f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &880849158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6820,6 +6845,7 @@ GameObject:
   - component: {fileID: 1853595768}
   - component: {fileID: 1853595767}
   - component: {fileID: 1853595769}
+  - component: {fileID: 1853595770}
   m_Layer: 0
   m_Name: NPC_1_FisherMen
   m_TagString: Untagged
@@ -6889,6 +6915,26 @@ MonoBehaviour:
   graphNumber: 0
   graph:
   - {fileID: 11400000, guid: 4f087ee92abff6f4cb7976a9bd2dd5c9, type: 2}
+--- !u!95 &1853595770
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853595765}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79f8b5eeda4b7ab41acb9da60ff0d561, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1885749616
 GameObject:
   m_ObjectHideFlags: 0
