@@ -24,7 +24,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -3836913323295345526}
+        node: {fileID: 7197866253203993398}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 24}
+  position: {x: -152, y: 8}
   ports:
     keys:
     - input
@@ -66,20 +66,17 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: -6854620526785130977}
+      - fieldName: input
+        node: {fileID: 7197866253203993398}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: You arrive at a desolate fishing village, with scattered wooden houses
-    dotting the barren soil beneath a dull, gray sky. The pungent odor of fish mixed
-    with the musty scent of decaying wood fills the air, making for an unpleasant
-    atmosphere. Sun-bleached fishing nets hang limply in the breeze, a testament
-    to the hard work and meager catches of the village's inhabitants. The bleak surroundings
-    offer little in the way of comfort or hope, with only the sound of waves crashing
-    against the shore to break the eerie silence.
+  dialogueLine: 'You arrive at a desolate fishing village, with scattered wooden
+    houses dotting the barren soil beneath a dull, gray sky. The pungent odor of
+    fish mixed with the musty scent of decaying wood fills the air, making for an
+    unpleasant atmosphere. '
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +93,7 @@ MonoBehaviour:
   - {fileID: 54654962301256806}
   - {fileID: -6854620526785130977}
   - {fileID: -3836913323295345526}
+  - {fileID: 7197866253203993398}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -112,7 +110,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -296, y: 56}
+  position: {x: -408, y: 40}
   ports:
     keys:
     - exit
@@ -129,3 +127,50 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+--- !u!114 &7197866253203993398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 72, y: 24}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7197866253203993398}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -3836913323295345526}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7197866253203993398}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -6854620526785130977}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Sun-bleached fishing nets hang limply in the breeze, a testament
+    to the hard work and meager catches of the village's inhabitants. The bleak surroundings
+    offer little in the way of comfort or hope, with only the sound of waves crashing
+    against the shore to break the eerie silence.
