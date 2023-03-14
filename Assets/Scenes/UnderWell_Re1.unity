@@ -399,6 +399,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7040768507126200331, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9049426655343478721, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3215,7 +3219,7 @@ GameObject:
   - component: {fileID: 1493938515}
   - component: {fileID: 1493938517}
   m_Layer: 0
-  m_Name: Gound
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
