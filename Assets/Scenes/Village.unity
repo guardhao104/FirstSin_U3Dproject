@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1763124246}
-  scenename: UnderWell_Re1
+  scenename: UnderWell
   playerDestination: TeleportPoint
 --- !u!61 &377486279
 BoxCollider2D:
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 809812914}
-  scenename: VillageHouse2_Re1
+  scenename: VillageHouse2
   playerDestination: Door
 --- !u!61 &418604042
 BoxCollider2D:
@@ -2915,7 +2915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1738329250}
-  scenename: Library_Re1
+  scenename: Library
   playerDestination: scene0_sin
 --- !u!61 &812130581
 BoxCollider2D:
@@ -4256,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1359457392}
-  scenename: VillageHouse1_Re1
+  scenename: VillageHouse1
   playerDestination: Door
 --- !u!61 &1152300944
 BoxCollider2D:
@@ -4466,6 +4466,10 @@ PrefabInstance:
       propertyPath: farRight
       value: 
       objectReference: {fileID: 852869368}
+    - target: {fileID: 9049426655343478729, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
+      propertyPath: jumpHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9049426655343478729, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
       propertyPath: mainCamera
       value: 
@@ -6085,7 +6089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 337676407}
-  scenename: QueenSquare_Re1
+  scenename: QueenSquare
   playerDestination: TeleportPointL
 --- !u!61 &1711375248
 BoxCollider2D:

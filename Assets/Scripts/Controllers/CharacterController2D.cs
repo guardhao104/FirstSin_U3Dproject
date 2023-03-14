@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine.Unity;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -10,12 +11,24 @@ public class CharacterController2D : MonoBehaviour
     // Move player in 2D space
     public float walkSpeed = 5.0f;
     public float runSpeed = 10.0f;
-    public float jumpHeight = 6.5f;
+    public float jumpHeight = 0.0f;
     public float gravityScale = 1.5f;
     public Camera mainCamera;
 
+    // camera border
     public Transform farLeft;  // End of screen Left
     public Transform farRight;  //End of Screen Right
+
+    // Controle player animation
+    public SkeletonAnimation skeletonAnimation;
+    public AnimationReferenceAsset idle;
+    public AnimationReferenceAsset walking;
+    public AnimationReferenceAsset running;
+
+    // animation state
+    private string currentState;
+    private string currentAnimation;
+
     private float cameraLeftBorder;
     private float cameraRightBorder;
 
@@ -28,9 +41,12 @@ public class CharacterController2D : MonoBehaviour
     CapsuleCollider2D mainCollider;
     Transform t;
 
+    private bool canMove;
+
     // Use this for initialization
     void Start()
     {
+        GameManager.player.Interactive = true;
         t = transform;
         r2d = GetComponent<Rigidbody2D>();
         mainCollider = GetComponent<CapsuleCollider2D>();
@@ -38,6 +54,10 @@ public class CharacterController2D : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
+
+        // Init (Joshua)
+        currentState = "Idle";
+        SetCharacterState(currentState);
 
         if (farLeft)
         {
@@ -66,8 +86,10 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        canMove = GameManager.player.Interactive;
+
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if (canMove && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
         }
@@ -76,22 +98,25 @@ public class CharacterController2D : MonoBehaviour
             if (isGrounded || r2d.velocity.magnitude < 0.01f)
             {
                 moveDirection = 0;
-                speed = 0;
             }
         }
 
         // Run/walk switch
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (canMove && Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
         }
-        else
+        else if(moveDirection != 0) // When player press key, set speed (Joshua)
         {
             speed = walkSpeed;
         }
+        else // No input, set speed to 0 (Joshua)
+        {
+            speed = 0;
+        }
 
         // Change facing direction
-        if (moveDirection != 0)
+        if (canMove && moveDirection != 0)
         {
             if (moveDirection > 0 && !facingRight)
             {
@@ -106,7 +131,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (canMove && Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
         }
@@ -151,12 +176,65 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Apply movement velocity
-        r2d.velocity = new Vector2((moveDirection) * speed, r2d.velocity.y);
-
-        Debug.Log("Speed: " + speed);
+        Move(); // (Joshua)
 
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(colliderRadius, 0, 0), isGrounded ? Color.green : Color.red);
     }
+
+    // Set animation (Joshua)
+    public void SetAnimation(AnimationReferenceAsset animation, bool loop, float timeScale)
+    {
+        // if the playing animation equal to current animation, stop load animation again
+        if (animation.name.Equals(currentAnimation))
+        {
+            return;
+        }
+        skeletonAnimation.state.SetAnimation(0, animation, loop).TimeScale = timeScale;
+        currentAnimation = animation.name;
+    }
+
+    // Set character state (Joshua)
+    public void SetCharacterState(string state)
+    {
+        switch(state)
+        {
+            case "Idle":
+                SetAnimation(idle, true, 1f);
+                break;
+            case "Walking":
+                SetAnimation(walking, true, 1f);
+                break;
+            case "Running":
+                SetAnimation(running, true, 1f);
+                break;
+            default:
+                Debug.Log("Unknow state");
+                break;
+        }
+    }
+
+    // Move player and trigger animation (Joshua)
+    private void Move()
+    {
+        var v = new Vector2((moveDirection) * speed, r2d.velocity.y);
+        r2d.velocity = v;
+
+        if (Mathf.Abs(v.x) == runSpeed)
+        {
+            SetCharacterState("Running");
+        }
+        else if (Mathf.Abs(v.x) == walkSpeed)
+        {
+            SetCharacterState("Walking");
+        }
+        else
+        {
+            SetCharacterState("Idle");
+            speed = 0;
+        }
+    }
+
+
 }

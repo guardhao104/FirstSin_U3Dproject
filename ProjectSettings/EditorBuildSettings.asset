@@ -9,24 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainPage.unity
     guid: daacc83a2803bba498f292ade8efe10f
   - enabled: 1
-    path: Assets/Scenes/Library_Re1.unity
+    path: Assets/Scenes/Library.unity
     guid: ef1509b44cdcd354b923609ec95f33b6
   - enabled: 1
-    path: Assets/Scenes/QueenSquare_Re1.unity
-    guid: d9af091e22a464cd28b5e59ee18907f2
-  - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: eb004140549979843a448ceebed85932
-  - enabled: 1
-    path: Assets/Scenes/UnderWell_Re1.unity
-    guid: 511a0298b93faa84ca6fc257539a5ee8
-  - enabled: 1
-    path: Assets/Scenes/Village_Re1.unity
+    path: Assets/Scenes/Village.unity
     guid: fb9a2ae92d5e06940831dc7cf0d2c8bc
   - enabled: 1
-    path: Assets/Scenes/VillageHouse1_Re1.unity
+    path: Assets/Scenes/VillageHouse1.unity
     guid: ae2ea7d011cf0d142aa9ce451530bae7
   - enabled: 1
-    path: Assets/Scenes/VillageHouse2_Re1.unity
+    path: Assets/Scenes/VillageHouse2.unity
     guid: 5d133288f029a984a8633960facf3810
+  - enabled: 1
+    path: Assets/Scenes/UnderWell.unity
+    guid: 511a0298b93faa84ca6fc257539a5ee8
+  - enabled: 1
+    path: Assets/Scenes/QueenSquare.unity
+    guid: d9af091e22a464cd28b5e59ee18907f2
   m_configObjects: {}

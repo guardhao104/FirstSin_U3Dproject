@@ -1587,6 +1587,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 886799060}
     - target: {fileID: 9049426655343478729, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
+      propertyPath: jumpHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049426655343478729, guid: 5423e99d994decd469b5f7a5ff526d30, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1462107781}
@@ -3577,7 +3581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1268649219}
-  scenename: Village_Re1
+  scenename: Village
   playerDestination: scene1_telToQueen
 --- !u!61 &1284095003
 BoxCollider2D:
