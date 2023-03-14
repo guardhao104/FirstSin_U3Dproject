@@ -12,8 +12,11 @@ public class SwitchBGM : MonoBehaviour
         if (bgmManager != null)
         {
             var ms = bgmManager.GetComponent<MusicSystem>();
-            ms.Stop();
-            ms.Play(bgmIndex);
+            if (ms.currentPlay != bgmIndex)
+            {
+                ms.Stop();
+                ms.Play(bgmIndex);
+            }
         }
     }
 }
