@@ -135,10 +135,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: "\rRed Hook\n\"You ignorant outsider, showing such brazen disrespect
-    to our beloved Queen,\" the gruff pirate snarls. \"The vast and unforgiving ocean
-    will become your grave. May the relentless winds tear apart your sails, and may
-    the ferocious sharks revel in the taste of your flesh and blood.\"\r\n"
+  speakerName: Red Hook
   dialogueLine: You ignorant outsider, showing such brazen disrespect to our supreme
     Queen. The vast and merciless ocean will become your grave. May the relentless
     winds tear apart your sails, and the ferocious sharks revel in your flesh and
@@ -515,7 +512,7 @@ MonoBehaviour:
   - {fileID: -963527672255091401}
   - {fileID: 3554996554626019376}
   start: {fileID: 0}
-  current: {fileID: -8449856510801530774}
+  current: {fileID: 0}
   initNode: {fileID: 0}
 --- !u!114 &435173808299508532
 MonoBehaviour:
@@ -608,10 +605,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerName: Red Hook
-  dialogueLine: '"Newcomer, eh? Although I''m unsure of your reason for coming here,
-    you are the first to lay eyes upon the Queen''s statue without paying proper
-    respects. Take heed, and stray not from the tradition, lest your body be found
-    in the rancid waters of Blackwater Bay come the following morning."'
+  dialogueLine: Newcomer, eh? Although I'm unsure of your reason for coming here,
+    you are the first to lay eyes upon the Queen's statue without paying proper respects.
+    Take heed, and stray not from the tradition, lest your body be found in the rancid
+    waters of Blackwater Bay come the following morn.
 --- !u!114 &3197327056568543477
 MonoBehaviour:
   m_ObjectHideFlags: 0
