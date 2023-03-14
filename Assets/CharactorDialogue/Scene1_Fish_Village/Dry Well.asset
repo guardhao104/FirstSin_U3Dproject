@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Set Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 600, y: 40}
+  position: {x: 776, y: 200}
   ports:
     keys:
     - input
@@ -25,7 +25,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -7056890537020442941}
+        node: {fileID: 867396926988125162}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -7068425034512866662}
+        node: {fileID: 867396926988125162}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -166,7 +166,8 @@ MonoBehaviour:
   - As the Archmage, you clearly possess a vast knowledge of spells. It would be
     fitting to converse with the dead now.
   - Never mind, let the poor man be.
-  speakerName: Great Library
+  speakerType: 2
+  speakerName: 
   DialogueText: He is a pitiful man, but in your eyes, his soul has not yet dissipated.
     Perhaps he still has some use to you.
 --- !u!114 &-2988100609546141084
@@ -268,9 +269,56 @@ MonoBehaviour:
   - {fileID: 2492963069712878718}
   - {fileID: 3029896134956270037}
   - {fileID: 3880300051615641198}
+  - {fileID: 867396926988125162}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
+--- !u!114 &867396926988125162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: 184}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 867396926988125162}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -7056890537020442941}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 867396926988125162}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7068425034512866662}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: As you approach the skeletal remains, you notice an old family crest
+    lying beside it, engraved with a majestic red eagle taking flight with its wings
+    spread wide.
 --- !u!114 &1604773165665484919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +564,7 @@ MonoBehaviour:
   m_Name: Set Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 872, y: 232}
+  position: {x: 1048, y: 200}
   ports:
     keys:
     - input
