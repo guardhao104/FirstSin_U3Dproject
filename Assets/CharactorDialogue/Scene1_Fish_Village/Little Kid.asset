@@ -36,8 +36,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 9092309591209189994}
+      - fieldName: input
+        node: {fileID: -2527005715474441388}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -46,6 +46,63 @@ MonoBehaviour:
   speakerName: Little Kid
   dialogueLine: But my grandpa always tells me that my parents went to the other
     side of the sea. When I grow up, they'll come and take me to be with them.
+--- !u!114 &-3722419001264895273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 264}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: -3722419001264895273}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4731389201994574511}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: -3722419001264895273}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6339308043231198825}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: -3722419001264895273}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4195182034493019936}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: 
 --- !u!114 &-2538305098472813343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +149,51 @@ MonoBehaviour:
   dialogueLine: The other side of the sea holds no great land, But only scattered
     isles, sparse and bland. As for me, I hail from a more distant place, A land
     of mystery, shrouded in grace.
+--- !u!114 &-2527005715474441388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 552, y: 296}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -2527005715474441388}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -4851684187391093205}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2527005715474441388}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 9092309591209189994}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene1_littleKid
+  flagValue: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +212,11 @@ MonoBehaviour:
   - {fileID: 4195182034493019936}
   - {fileID: -4851684187391093205}
   - {fileID: -2538305098472813343}
+  - {fileID: -3722419001264895273}
+  - {fileID: 6339308043231198825}
+  - {fileID: -2527005715474441388}
   start: {fileID: 0}
-  current: {fileID: 4195182034493019936}
+  current: {fileID: 0}
   initNode: {fileID: 0}
 --- !u!114 &4195182034493019936
 MonoBehaviour:
@@ -137,8 +242,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: exit
-        node: {fileID: 4731389201994574511}
+      - fieldName: falseExit
+        node: {fileID: -3722419001264895273}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -172,7 +277,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -472, y: 88}
+  position: {x: -600, y: 104}
   ports:
     keys:
     - exit
@@ -183,12 +288,57 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4195182034493019936}
+        node: {fileID: -3722419001264895273}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+--- !u!114 &6339308043231198825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -72, y: 328}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6339308043231198825}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -3722419001264895273}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6339308043231198825}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 9092309591209189994}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Little Kid
+  dialogueLine: I wish I could grow up faster so that I can see my parents again.
 --- !u!114 &9092309591209189994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +352,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 648, y: 104}
+  position: {x: 760, y: 440}
   ports:
     keys:
     - entry
@@ -213,7 +363,10 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -4851684187391093205}
+        node: {fileID: 6339308043231198825}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -2527005715474441388}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

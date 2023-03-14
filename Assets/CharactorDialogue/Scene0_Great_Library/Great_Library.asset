@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7026183008920645193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: -56}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -7026183008920645193}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 3011485096893984802}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7026183008920645193}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 534313646934874234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene0_sin
+  flagValue: 1
 --- !u!114 &-7017603683049542274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +58,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: -8}
+  position: {x: -296, y: -24}
   ports:
     keys:
     - input
@@ -24,8 +69,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: exit
-        node: {fileID: 5770522758778002882}
+      - fieldName: falseExit
+        node: {fileID: 1559649806774573136}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -37,15 +82,58 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
+        node: {fileID: -696918248802974942}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: 'My loyal guradian, it is your sacred duty to collect sins and maintain
+    balance in this world. '
+--- !u!114 &-696918248802974942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -40, y: -8}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -696918248802974942}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -7017603683049542274}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -696918248802974942}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
         node: {fileID: 3011485096893984802}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: My loyal guradian, it is your sacred duty to collect sins and maintain
-    balance in this world. Now, it is time to pass judgment on the first sin of this
-    realm.
+  dialogueLine: Now, it is time to pass judgment on the first sin of this realm.
 --- !u!114 &-107558493902583387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,7 +147,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: 24}
+  position: {x: 808, y: -40}
   ports:
     keys:
     - entry
@@ -70,7 +158,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 3011485096893984802}
+        node: {fileID: 534313646934874234}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -93,9 +181,118 @@ MonoBehaviour:
   - {fileID: -107558493902583387}
   - {fileID: 3011485096893984802}
   - {fileID: -7017603683049542274}
+  - {fileID: 1559649806774573136}
+  - {fileID: 534313646934874234}
+  - {fileID: -696918248802974942}
+  - {fileID: -7026183008920645193}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
+--- !u!114 &534313646934874234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 344}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 534313646934874234}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 1559649806774573136}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -7026183008920645193}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 534313646934874234}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -107558493902583387}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: Let us embark, my faithful guradian, to collect these unbridled
+    sins and preserve the balance of the world.
+--- !u!114 &1559649806774573136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -616, y: 88}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 1559649806774573136}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 5770522758778002882}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 1559649806774573136}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 534313646934874234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 1559649806774573136}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7017603683049542274}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene0_sin
 --- !u!114 &3011485096893984802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +306,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8, y: 72}
+  position: {x: 216, y: -24}
   ports:
     keys:
     - input
@@ -121,7 +318,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -7017603683049542274}
+        node: {fileID: -696918248802974942}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -132,8 +329,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: -107558493902583387}
+      - fieldName: input
+        node: {fileID: -7026183008920645193}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -147,11 +344,11 @@ MonoBehaviour:
 
     freedom.
 
-    You shall be humbled, and will bow to its sublime
-    justice. Freedom is not
+    You shall be humbled, and will bow to its sublime justice.
+    Freedom is not
 
-    your right; You merely borrow it while you are
-    virtuous. May this sentence
+    your right; You merely borrow it while you are virtuous.
+    May this sentence
 
     teach you restraint.'
 --- !u!114 &5770522758778002882
@@ -167,7 +364,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: 56}
+  position: {x: -856, y: 88}
   ports:
     keys:
     - exit
@@ -178,7 +375,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -7017603683049542274}
+        node: {fileID: 1559649806774573136}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
