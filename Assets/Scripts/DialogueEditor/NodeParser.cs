@@ -12,7 +12,9 @@ public class NodeParser : MonoBehaviour
     [Header("Player")]
     public GameObject player;
     public Sprite playerImage;
+    private string playerName = "";
     public Sprite libraryImage;
+    private string libraryName = "The Great Library";
 
     [Header("UI Component")]
     public GameObject dialoguePanel;
@@ -98,8 +100,6 @@ public class NodeParser : MonoBehaviour
     private void UpdateDialogue(ChoiceDialogueNode newSegment)
     {
         activeSegment = newSegment;
-        dialogueText.text = newSegment.DialogueText;
-        speakerNameText.text = newSegment.speakerName;
         int answerIndex = 0;
         foreach (Transform child in buttonParent)
         {
@@ -170,7 +170,7 @@ public class NodeParser : MonoBehaviour
             }
         }
 
-        if (dataParts[0] == "ChoiceDialogueNode")
+        if (dataParts[0] == "NPCChoiceDialogueNode")
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -189,6 +189,63 @@ public class NodeParser : MonoBehaviour
             }
             if(dialogueText.text == ""){
                 Debug.LogError("ERROR: Dialogue text for ChoiceDialogueNode is empty");
+            }
+        }
+
+        if (dataParts[0] == "PlayerChoiceDialogueNode")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            buttonContainer.SetActive(true);
+            headImage.sprite = playerImage;
+            headImage.enabled = true;
+            headImageBorder.enabled = true;
+            speakerNameText.text = playerName;
+            StartCoroutine(setTextUI(dataParts[2]));
+
+            yield return new WaitUntil(() => (textFinished));
+            UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons 
+
+            if(dialogueText.text == ""){
+                Debug.LogError("ERROR: Dialogue text for ChoiceDialogueNode is empty");
+            }
+        }
+
+        if (dataParts[0] == "LibraryChoiceDialogueNode")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            buttonContainer.SetActive(true);
+            headImage.sprite = libraryImage;
+            headImage.enabled = true;
+            headImageBorder.enabled = true;
+            speakerNameText.text = libraryName;
+            StartCoroutine(setTextUI(dataParts[2]));
+
+            yield return new WaitUntil(() => (textFinished));
+            UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons 
+
+            if(dialogueText.text == ""){
+                Debug.LogError("ERROR: Dialogue text for ChoiceDialogueNode is empty");
+            }
+        }
+
+        if (dataParts[0] == "DescriptionChoiceDialogueNode")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            buttonContainer.SetActive(true);
+            headImage.enabled = false;
+            headImageBorder.enabled = false;
+            speakerNameText.text = "";
+            StartCoroutine(setDescriptionTextUI(dataParts[2]));
+
+            yield return new WaitUntil(() => (textFinished));
+            UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons 
+
+            if (descriptionText.text == "")
+            {
+                Debug.LogError("ERROR: Description text for DescriptionNode is empty");
             }
         }
 
@@ -224,7 +281,7 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = playerImage;
             headImage.enabled = true;
             headImageBorder.enabled = true;
-            speakerNameText.text = "";
+            speakerNameText.text = playerName;
             StartCoroutine(setTextUI(dataParts[1]));
 
             if (dialogueText.text == "")
@@ -246,7 +303,7 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = libraryImage;
             headImage.enabled = true;
             headImageBorder.enabled = true;
-            speakerNameText.text = "The Great Library";
+            speakerNameText.text = libraryName;
             StartCoroutine(setTextUI(dataParts[1]));
 
             if (dialogueText.text == "")
@@ -270,9 +327,9 @@ public class NodeParser : MonoBehaviour
             speakerNameText.text = "";
             StartCoroutine(setDescriptionTextUI(dataParts[1]));
 
-            if (dialogueText.text == "")
+            if (descriptionText.text == "")
             {
-                Debug.LogError("ERROR: Dialogue text for DescriptionNode is empty");
+                Debug.LogError("ERROR: Description text for DescriptionNode is empty");
             }
 
             yield return new WaitUntil(() => (dialoguePanel.activeSelf));
