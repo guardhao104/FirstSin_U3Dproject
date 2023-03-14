@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1315751}
   - component: {fileID: 1315750}
   m_Layer: 0
-  m_Name: NPC_3_Guideboard
+  m_Name: Guideboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &438389571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6464,8 +6464,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748232661}
+  - component: {fileID: 1748232662}
   m_Layer: 0
-  m_Name: TeleportPointR
+  m_Name: scene1_telToQueen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6488,6 +6489,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1748232662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748232660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0924eb0771b90f47a0fecb94eb554f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1763124246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6876,7 +6889,6 @@ MonoBehaviour:
   graphNumber: 0
   graph:
   - {fileID: 11400000, guid: 4f087ee92abff6f4cb7976a9bd2dd5c9, type: 2}
-  - {fileID: 11400000, guid: 44746fec4e9328f4888bf6ac3e96779f, type: 2}
 --- !u!1 &1885749616
 GameObject:
   m_ObjectHideFlags: 0
