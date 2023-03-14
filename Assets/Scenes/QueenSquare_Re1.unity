@@ -3578,7 +3578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1268649219}
   scenename: Village_Re1
-  playerDestination: TeleportPointR
+  playerDestination: scene1_telToQueen
 --- !u!61 &1284095003
 BoxCollider2D:
   m_ObjectHideFlags: 0

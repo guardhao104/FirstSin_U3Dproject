@@ -6241,7 +6241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 337676407}
   scenename: QueenSquare_Re1
-  playerDestination: scene1_telToQueen
+  playerDestination: TeleportPointL
 --- !u!61 &1711375248
 BoxCollider2D:
   m_ObjectHideFlags: 0
