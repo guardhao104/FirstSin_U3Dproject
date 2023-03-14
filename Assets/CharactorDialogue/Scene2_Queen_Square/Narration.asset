@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 456, y: -8}
+  position: {x: 808, y: 232}
   ports:
     keys:
     - entry
@@ -24,7 +24,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -67993697222595777}
+        node: {fileID: 4519518975727003618}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -66,24 +66,19 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: -8760726104805809540}
+      - fieldName: input
+        node: {fileID: 4519518975727003618}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: You stride across the threshold of the sprawling square, the city's
+  dialogueLine: 'You stride across the threshold of the sprawling square, the city''s
     most arresting and singular sight. Amidst the grime and chaos of this pirate
-    haven, the Queen's Square blazes like a lotus in murky waters. At the heart of
-    it all stands a towering statue of a lady, crafted from obsidian, her feet atop
+    haven, the Queen''s Square blazes like a lotus in murky waters. At the heart
+    of it all stands a towering statue of a lady, crafted from marble, her feet atop
     a glittering hoard of silver and gold. In one hand, she grips a cutlass, and
-    with the other, she points into the distance, as if guiding ships to safe harbor.
-    Upon her shoulder perches a black parrot, its feathers glossy as ink. And behind
-    her, a pirate flag flaps in the breeze, an emblem of the daring and danger that
-    pervades these shores. But even the most impetuous of pirates pause before her,
-    tipping their hats in deference to her power and poise. For this lady of stone
-    commands respect, even from those who live and die by the sea.
+    with the other, she points into the distance, as if guiding ships to safe harbor. '
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,9 +95,59 @@ MonoBehaviour:
   - {fileID: 6271601814036687613}
   - {fileID: -8760726104805809540}
   - {fileID: -67993697222595777}
+  - {fileID: 4519518975727003618}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
+--- !u!114 &4519518975727003618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 136}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4519518975727003618}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -67993697222595777}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4519518975727003618}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -8760726104805809540}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: "\rUpon her shoulder perches a black parrot, its feathers glossy
+    as ink. And behind her, a pirate flag flaps in the breeze, an emblem of the daring
+    and danger that pervades these shores. But even the most impetuous of pirates
+    pause before her, tipping their hats in deference to her power and poise. For
+    this lady of stone commands respect, even from those who live and die by the
+    sea.\r\n"
 --- !u!114 &6271601814036687613
 MonoBehaviour:
   m_ObjectHideFlags: 0
