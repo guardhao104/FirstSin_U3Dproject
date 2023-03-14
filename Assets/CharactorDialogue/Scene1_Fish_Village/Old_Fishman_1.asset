@@ -313,7 +313,8 @@ MonoBehaviour:
   Answers:
   - The Black Flag? What happened, Old man?
   - Is there anything I can do for you old man?
-  speakerName: Player
+  speakerType: 1
+  speakerName: 
   DialogueText: 
 --- !u!114 &-3601266437309851157
 MonoBehaviour:
@@ -448,7 +449,8 @@ MonoBehaviour:
   - The Black Flag? What happened, Old man?
   - Is there anything I can do for you old man?
   - Thank you for the inforamtion, old man.
-  speakerName: Player
+  speakerType: 1
+  speakerName: 
   DialogueText: 
 --- !u!114 &11400000
 MonoBehaviour:

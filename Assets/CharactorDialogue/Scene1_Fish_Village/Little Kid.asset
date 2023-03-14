@@ -102,7 +102,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  flagName: 
+  flagName: scene1_littleKid
 --- !u!114 &-2538305098472813343
 MonoBehaviour:
   m_ObjectHideFlags: 0
