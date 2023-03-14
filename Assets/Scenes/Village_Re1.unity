@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &438389571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1738329250}
   scenename: Library_Re1
-  playerDestination: TeleportPoint
+  playerDestination: scene0_sin
 --- !u!61 &812130581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6241,7 +6241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 337676407}
   scenename: QueenSquare_Re1
-  playerDestination: TeleportPointL
+  playerDestination: scene1_telToQueen
 --- !u!61 &1711375248
 BoxCollider2D:
   m_ObjectHideFlags: 0
