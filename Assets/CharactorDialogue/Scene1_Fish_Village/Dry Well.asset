@@ -215,6 +215,51 @@ MonoBehaviour:
       _dynamic: 0
   descriptionText: The old man pointed you towards the direction of the City of Liberty,
     a bustling metropolis located to the south of the continent.
+--- !u!114 &-1745062695548093104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -138.9883, y: 548.20776}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -1745062695548093104}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 2492963069712878718}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1745062695548093104}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1663160429078742138}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: The soul of this unfortunate mortal is already so feeble. Let us
+    leave him to his own devices and continue on our journey.
 --- !u!114 &-452074684588974803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,9 +312,9 @@ MonoBehaviour:
   - {fileID: -2988100609546141084}
   - {fileID: -7068425034512866662}
   - {fileID: 2492963069712878718}
-  - {fileID: 3029896134956270037}
   - {fileID: 3880300051615641198}
   - {fileID: 867396926988125162}
+  - {fileID: -1745062695548093104}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -393,10 +438,10 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 3029896134956270037}
+        node: {fileID: 3880300051615641198}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: 3880300051615641198}
+        node: {fileID: -1745062695548093104}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -486,7 +531,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 3029896134956270037}
+        node: {fileID: -1745062695548093104}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -505,52 +550,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   flagName: scene1_dryWell
---- !u!114 &3029896134956270037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -616, y: 376}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: 3029896134956270037}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: trueExit
-        node: {fileID: 2492963069712878718}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 3029896134956270037}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: 1663160429078742138}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  speakerName: Great Library
-  dialogueLine: The soul of this unfortunate mortal is already so feeble. Let us
-    leave him to his own devices and continue on our journey.
 --- !u!114 &3880300051615641198
 MonoBehaviour:
   m_ObjectHideFlags: 0

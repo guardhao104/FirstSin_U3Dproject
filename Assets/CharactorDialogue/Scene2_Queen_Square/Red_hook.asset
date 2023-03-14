@@ -89,7 +89,8 @@ MonoBehaviour:
   - I do not care about your threats, nor do I have any interest in your traditions.
     I have come here for a more important matter.
   - Have you ever heard of the Red Ravens family?
-  speakerName: Player
+  speakerType: 1
+  speakerName: 
   DialogueText: You must respond to this guy one way or another.
 --- !u!114 &-8420970510899063642
 MonoBehaviour:
@@ -514,7 +515,7 @@ MonoBehaviour:
   - {fileID: -963527672255091401}
   - {fileID: 3554996554626019376}
   start: {fileID: 0}
-  current: {fileID: 0}
+  current: {fileID: -8449856510801530774}
   initNode: {fileID: 0}
 --- !u!114 &435173808299508532
 MonoBehaviour:
