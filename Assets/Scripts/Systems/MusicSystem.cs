@@ -6,7 +6,14 @@ public class MusicSystem : MonoBehaviour
 {
 
     public AudioSource[] audioSource;
-    private int currentPlay = 0;
+    public int currentPlay = 0;
+
+    void Awake()
+    {
+        // Destroy(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
