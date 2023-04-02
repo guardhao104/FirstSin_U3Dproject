@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QueenSquare.unity
     guid: d9af091e22a464cd28b5e59ee18907f2
+  - enabled: 1
+    path: Assets/Scenes/BlackSailsTavern.unity
+    guid: eef057215033f5443b8247efdd2080aa
+  - enabled: 1
+    path: Assets/Scenes/BlackwaterBay.unity
+    guid: 85aeb935df641584f91562908aee06a8
+  - enabled: 1
+    path: Assets/Scenes/Flagship.unity
+    guid: f6a944df38d43234c834c5a59c9e6960
   m_configObjects: {}
