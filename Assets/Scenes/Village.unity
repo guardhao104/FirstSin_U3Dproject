@@ -724,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ENTER
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1113,7 +1113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2081701167
   m_SortingLayer: 1
-  m_SortingOrder: 9
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 014b190b55188e346a56c8186cb8ad6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2044,7 +2044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639524459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3475,7 +3475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928901554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.47, y: 6.81, z: 0.7338698}
+  m_LocalPosition: {x: 4.47, y: 6.65, z: 0.7338698}
   m_LocalScale: {x: 1.5338, y: 1.8902, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3522,7 +3522,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2081701167
   m_SortingLayer: 1
-  m_SortingOrder: 11
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0f2bebd49bb1c0c45951d2c81b51b861, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6208,7 +6208,6 @@ GameObject:
   - component: {fileID: 1711375246}
   - component: {fileID: 1711375249}
   - component: {fileID: 1711375248}
-  - component: {fileID: 1711375247}
   - component: {fileID: 1711375250}
   m_Layer: 0
   m_Name: Square
@@ -6232,21 +6231,6 @@ Transform:
   m_Father: {fileID: 1748232661}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1711375247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711375245}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14169fa2c1fa16e428c0bf1c7b590e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 337676407}
-  scenename: QueenSquare
-  playerDestination: TeleportPointL
 --- !u!61 &1711375248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6979,7 +6963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 19972354}
-  headImage: {fileID: 21300000, guid: 312f1443d4751d9449d7afab2244d66b, type: 3}
+  headImage: {fileID: 21300000, guid: 56554a44fe314e043a2b049d96eb224b, type: 3}
   newDialogeIcon: {fileID: 21300000, guid: dfec9425890e74a4d9d18b6ef600c542, type: 3}
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
@@ -7267,7 +7251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999785356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.4294167, y: -0.93672323, z: 0.7338698}
+  m_LocalPosition: {x: 7.4294167, y: -1.02, z: 0.7338698}
   m_LocalScale: {x: 3.2108, y: 6.4798, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7314,7 +7298,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2081701167
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 3e04339f12159454ab280cbf95fd27d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
