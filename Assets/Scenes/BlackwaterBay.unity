@@ -1260,7 +1260,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380725125}
-  - component: {fileID: 380725124}
   m_Layer: 0
   m_Name: BlackSailsTravermEnterance
   m_TagString: Untagged
@@ -1268,18 +1267,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &380725124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380725123}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0924eb0771b90f47a0fecb94eb554f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &380725125
 Transform:
   m_ObjectHideFlags: 0
@@ -1430,16 +1417,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &416222337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856211, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 1631501569}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &416222338 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856208, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 1631501569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418523577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,26 +2682,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 662839814}
-  - component: {fileID: 662839813}
+  - component: {fileID: 662839815}
   m_Layer: 0
-  m_Name: Gate
+  m_Name: EndingSceneTeleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &662839813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662839812}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0924eb0771b90f47a0fecb94eb554f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 1
 --- !u!4 &662839814
 Transform:
   m_ObjectHideFlags: 0
@@ -2733,7 +2698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662839812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.9, y: -1.75, z: 0}
+  m_LocalPosition: {x: 107.2, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2742,6 +2707,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &662839815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662839812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116e0b07743724e9980431eb51bfed64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &694344064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,8 +4536,6 @@ MonoBehaviour:
   speakerNameText: {fileID: 1108659762}
   dialogueText: {fileID: 785648880}
   descriptionText: {fileID: 29736308}
-  buttonContainer: {fileID: 416222337}
-  buttonParent: {fileID: 416222338}
   buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
   textDisplaySpeed: 0.01
 --- !u!1 &1239181241
@@ -5353,6 +5328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3701486991756790736, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3701486991756790764, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5651,7 +5630,7 @@ GameObject:
   - component: {fileID: 1752484280}
   - component: {fileID: 1752484283}
   - component: {fileID: 1752484282}
-  - component: {fileID: 1752484281}
+  - component: {fileID: 1752484284}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -5674,21 +5653,6 @@ Transform:
   m_Father: {fileID: 662839814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752484281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752484279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14169fa2c1fa16e428c0bf1c7b590e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 800722095}
-  scenename: QueenSquare
-  playerDestination: TeleportPointR
 --- !u!61 &1752484282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5767,6 +5731,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1752484284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752484279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46914a9d7890e44bfa03b60b919274eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 800722095}
+  switchSceneName: EndingScene
 --- !u!1 &1762860082
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SwitchScene/VillageToQueenSquare.unity
     guid: 6a4ea7737d3be485bb1c4782b4f978fd
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 4ed61c692c0214f47a4baae43c6c4f2d
   m_configObjects: {}
