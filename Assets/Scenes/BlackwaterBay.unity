@@ -3862,7 +3862,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: 4f087ee92abff6f4cb7976a9bd2dd5c9, type: 2}
+  - {fileID: 11400000, guid: 090e4d55015dcd8488e822150de5ddd0, type: 2}
 --- !u!61 &976277401
 BoxCollider2D:
   m_ObjectHideFlags: 0
