@@ -137,7 +137,8 @@ MonoBehaviour:
     flagship.
   speakerType: 1
   speakerName: 
-  DialogueText: 
+  DialogueText: "He appears to be the most prominent figure on the entire Hafnfrei\xF0r,
+    and the long-buried secrets may very well be lying dormant in his memory."
 --- !u!114 &-8334504338726456283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +423,8 @@ MonoBehaviour:
     become the City of Freedom?"
   speakerType: 1
   speakerName: 
-  DialogueText: 
+  DialogueText: "He appears to be the most prominent figure on the entire Hafnfrei\xF0r,
+    and the long-buried secrets may very well be lying dormant in his memory."
 --- !u!114 &-6767474109447217262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,7 +1647,8 @@ MonoBehaviour:
     become the City of Freedom?"
   speakerType: 1
   speakerName: 
-  DialogueText: 
+  DialogueText: "He appears to be the most prominent figure on the entire Hafnfrei\xF0r,
+    and the long-buried secrets may very well be lying dormant in his memory."
 --- !u!114 &457951782045824660
 MonoBehaviour:
   m_ObjectHideFlags: 0
