@@ -23,8 +23,6 @@ public class NodeParser : MonoBehaviour
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI descriptionText;
-    public GameObject buttonContainer;
-    public Transform buttonParent;
     public GameObject buttonPrefab;
 
     [Header("Text Display")]
@@ -80,7 +78,6 @@ public class NodeParser : MonoBehaviour
     // Choices button is pressed
     public void AnswerClicked(int clickedIndex)
     {
-        buttonContainer.SetActive(false);
         BaseNode b = graph.current;
         var port = activeSegment.GetPort("Answers " + clickedIndex);
 
@@ -101,18 +98,10 @@ public class NodeParser : MonoBehaviour
     {
         activeSegment = newSegment;
         int answerIndex = 0;
-        foreach (Transform child in buttonParent)
-        {
-            Destroy(child.gameObject);
-        }
 
         foreach (var answer in newSegment.Answers)
         {
-            var btn = Instantiate(buttonPrefab, buttonParent);
-            btn.GetComponentInChildren<TextMeshProUGUI>().text = answer;
-
-            var index = answerIndex;
-            btn.GetComponentInChildren<Button>().onClick.AddListener((() => { AnswerClicked(index);}));
+            dialogueText.text += "<br><link=" + answerIndex + "><color=blue> * " + answer + "</color></link>";
             answerIndex++;
         }
     }
@@ -131,11 +120,6 @@ public class NodeParser : MonoBehaviour
         headImage.enabled = false;
         headImageBorder.enabled = false;
 
-        foreach (Transform child in buttonParent)
-        {
-            Destroy(child.gameObject);
-        }
-
         if (dataParts[0] == "Start")
         {
             Cursor.visible = true;
@@ -146,9 +130,6 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = null;
             headImage.enabled = false;
             headImageBorder.enabled = false;
-            foreach (Transform child in buttonParent){
-                Destroy(child.gameObject);
-            }
         }
 
         if (dataParts[0] == "SetFlagNode")
@@ -180,7 +161,6 @@ public class NodeParser : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            buttonContainer.SetActive(true);
             headImage.sprite = npcImage;
             headImage.enabled = true;
             headImageBorder.enabled = true;
@@ -202,7 +182,6 @@ public class NodeParser : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            buttonContainer.SetActive(true);
             headImage.sprite = playerImage;
             headImage.enabled = true;
             headImageBorder.enabled = true;
@@ -210,7 +189,7 @@ public class NodeParser : MonoBehaviour
             StartCoroutine(setTextUI(dataParts[2]));
 
             yield return new WaitUntil(() => (textFinished));
-            UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons 
+            UpdateDialogue(b as ChoiceDialogueNode); //Instantiates the buttons
 
             if(dialogueText.text == ""){
                 Debug.LogError("ERROR: Dialogue text for ChoiceDialogueNode is empty");
@@ -221,7 +200,6 @@ public class NodeParser : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            buttonContainer.SetActive(true);
             headImage.sprite = libraryImage;
             headImage.enabled = true;
             headImageBorder.enabled = true;
@@ -240,7 +218,6 @@ public class NodeParser : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            buttonContainer.SetActive(true);
             headImage.enabled = false;
             headImageBorder.enabled = false;
             speakerNameText.text = "";
@@ -356,9 +333,6 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = null;
             headImage.enabled = false;
             headImageBorder.enabled = false;
-            foreach (Transform child in buttonParent){
-                Destroy(child.gameObject);
-            }
         }
 
         if (dataParts[0] == "CloseDialogue_ExitNode_NoLoop_toStart")
@@ -371,9 +345,6 @@ public class NodeParser : MonoBehaviour
             headImage.sprite = null;
             headImage.enabled = false;
             headImageBorder.enabled = false;
-            foreach (Transform child in buttonParent){
-                Destroy(child.gameObject);
-            }
         }
     }
 
@@ -385,11 +356,6 @@ public class NodeParser : MonoBehaviour
         headImage.sprite = null;
         headImage.enabled = false;
         headImageBorder.enabled = false;
-        foreach (Transform child in buttonParent)
-        {
-            Destroy(child.gameObject);
-        }
-
         if (_parser != null)
         {
             StopCoroutine(_parser); 
