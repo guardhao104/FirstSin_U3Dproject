@@ -19,6 +19,9 @@ public class Player
 
     // Data container of player's event flags
     public Dictionary<string, bool> playerFlags = new Dictionary<string, bool>();
+    
+    // Data container of player's clue collections
+    public Dictionary<int, int> playerClues = new Dictionary<int, int>();
 
     public void SetFlag(string key, bool value)
     {
@@ -41,6 +44,22 @@ public class Player
         else
         {
             return false;
+        }
+    }
+
+    public void UpdateClue(int id, int childId)
+    {
+        var pm = GameObject.Find("PuzzleManager");
+        var ps = pm.GetComponent<PuzzleSystem>();
+        if (playerClues.ContainsKey(id))
+        {
+            playerClues[id] = childId;
+            ps.UpdateClue(id, childId);
+        }
+        else
+        {
+            playerClues.Add(id, childId);
+            ps.InsertClue(id, childId);
         }
     }
 }

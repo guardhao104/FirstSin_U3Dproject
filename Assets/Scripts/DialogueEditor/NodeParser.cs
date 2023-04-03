@@ -170,6 +170,12 @@ public class NodeParser : MonoBehaviour
             }
         }
 
+        if (dataParts[0] == "SetClueNode")
+        {
+            GameManager.player.UpdateClue(int.Parse(dataParts[1]), int.Parse(dataParts[2]));
+            NextNode("exit");
+        }
+
         if (dataParts[0] == "NPCChoiceDialogueNode")
         {
             Cursor.visible = true;
