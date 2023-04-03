@@ -20,7 +20,10 @@ public class BlockBlackBayTrigger : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            rightBorder.transform.position = leftSoldier.transform.position;
+            if (!GameManager.player.GetFlag("scene3_allowFlagship"))
+            {
+                rightBorder.transform.position = leftSoldier.transform.position;
+            }
         }
     }
 }
