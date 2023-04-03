@@ -117,6 +117,7 @@ MonoBehaviour:
   - {fileID: 8317233924558535163}
   - {fileID: -4228944016212637987}
   - {fileID: 5147850006906900178}
+  - {fileID: 2023183448978978869}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -177,6 +178,51 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   flagName: scene2_showRespect
+--- !u!114 &2023183448978978869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1393.7922, y: -94.913315}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 2023183448978978869}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 5147850006906900178}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2023183448978978869}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 2255777613649864291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_redHook
+  flagValue: 1
 --- !u!114 &2255777613649864291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +236,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1496, y: 8}
+  position: {x: 1640, y: 24}
   ports:
     keys:
     - entry
@@ -201,13 +247,13 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
+        node: {fileID: -4228944016212637987}
+        reroutePoints: []
+      - fieldName: exit
         node: {fileID: -1222114313512921346}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: 5147850006906900178}
-        reroutePoints: []
-      - fieldName: exit
-        node: {fileID: -4228944016212637987}
+        node: {fileID: 2023183448978978869}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -249,8 +295,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 2255777613649864291}
+      - fieldName: input
+        node: {fileID: 2023183448978978869}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

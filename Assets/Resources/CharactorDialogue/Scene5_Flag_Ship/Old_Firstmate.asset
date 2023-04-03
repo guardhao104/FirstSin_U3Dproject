@@ -1,0 +1,3561 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8580387519773443791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6248, y: 3304}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -8580387519773443791}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4429513007972502018}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -8580387519773443791}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7790052049518875834}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Thank you, venerable First Mate. Every word you spoke is of utmost
+    importance to me.
+--- !u!114 &-8375252383086079086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3352, y: -856}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    - Answers 2
+    values:
+    - _fieldName: input
+      _node: {fileID: -8375252383086079086}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 5366593966658504400}
+        reroutePoints: []
+      - fieldName: Answers 0
+        node: {fileID: -114790881358711207}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -8375252383086079086}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -8375252383086079086}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -3201340794445624439}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: -8375252383086079086}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -1234898636000048077}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 2
+      _node: {fileID: -8375252383086079086}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 4811835669651653466}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "It is said that the war not only left wounds upon \xC1nslo, but also inflicted
+    deep scars upon the relationship between the princess and her father, the king."
+  - "Pray, how did Princess Sabatina become the Pirate Queen, and how did \xC1nslo
+    become the City of Freedom?"
+  - Might I inquire about this vessel? I have heard that it was once the queen's
+    flagship.
+  speakerType: 1
+  speakerName: 
+  DialogueText: 
+--- !u!114 &-8334504338726456283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4328, y: 1960}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: -8334504338726456283}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 5250362768844621920}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: -8334504338726456283}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6504163245362002300}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: -8334504338726456283}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5911417369938343908}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_redHook
+--- !u!114 &-7936528789045750755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7016, y: 680}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -7936528789045750755}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: -114790881358711207}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7936528789045750755}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -341663206006174628}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Thank you, venerable First Mate. Every word you spoke is of utmost
+    importance to me.
+--- !u!114 &-7824294314670279222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2648, y: 1928}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: -7824294314670279222}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: 4990256808621688291}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: -7824294314670279222}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5002560404344250129}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: -7824294314670279222}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 339987913208959832}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_Taste_Balcksail
+--- !u!114 &-7804588907064888571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7240, y: 1944}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -7804588907064888571}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 1807916077726166226}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 5318655738970426442}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7804588907064888571}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1196236944915690847}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: NormalEnd
+  flagValue: 1
+--- !u!114 &-7001279889545732371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3112, y: 888}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: -7001279889545732371}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: 5366593966658504400}
+        reroutePoints: []
+      - fieldName: Answers 0
+        node: {fileID: 4751497032725703832}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -7001279889545732371}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -7001279889545732371}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 8152292340355178978}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: -7001279889545732371}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -6767474109447217262}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "It is said that the war not only left wounds upon \xC1nslo, but also inflicted
+    deep scars upon the relationship between the princess and her father, the king."
+  - "Pray, how did Princess Sabatina become the Pirate Queen, and how did \xC1nslo
+    become the City of Freedom?"
+  speakerType: 1
+  speakerName: 
+  DialogueText: 
+--- !u!114 &-6767474109447217262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3608, y: 1384}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -6767474109447217262}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: -7001279889545732371}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -6767474109447217262}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5639173827435861812}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: 'The old man looked at you with a gaze full of meaning, as if
+    his wisdom, accumulated over years, caught a glimpse of the great willpower behind
+    you.
+
+'
+--- !u!114 &-6571712099784861114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 360}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -6571712099784861114}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 564763370978801575}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -6571712099784861114}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7163020486724149343}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Before you stands an elderly man dressed in exquisite attire. The
+    ravages of the sea are etched onto his weathered skin, and his white hair frames
+    a pair of sharp, hawk-like eyes. You can sense that he has an extraordinary past.
+--- !u!114 &-6530430630631573944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1160, y: 456}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    values:
+    - _fieldName: input
+      _node: {fileID: -6530430630631573944}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 7163020486724149343}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -6530430630631573944}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -6530430630631573944}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -943194308283637637}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "Good sir, would you be so kind as to enlighten me on the history of \xC1nslo,
+    and the wars it waged with V\xE4rmstad?"
+  speakerType: 1
+  speakerName: 
+  DialogueText: "He appears to be the most prominent figure on the entire Hafnfrei\xF0r,
+    and the long-buried secrets may very well be lying dormant in his memory."
+--- !u!114 &-6306361977482186597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3384, y: 3752}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -6306361977482186597}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: 339987913208959832}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -6306361977482186597}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8399974639260544740}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: 'The old man looked at you with a gaze full of meaning, as if
+    his wisdom, accumulated over years, caught a glimpse of the great willpower behind
+    you.
+
+'
+--- !u!114 &-5911417369938343908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5288, y: 2184}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -5911417369938343908}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: -8334504338726456283}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 3602028467956709362}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -5911417369938343908}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5288614527563996745}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 7
+  clueChildId: 1
+--- !u!114 &-5766209131250798588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5128, y: -536}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -5766209131250798588}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 781842179885929954}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -5766209131250798588}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3517011938397713235}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: 'Behold the ocean, a realm of liberty,
+
+    Where my will is sovereign,
+    unbound and free.
+
+    I''ll tame the fierce winds and the raging sea,
+
+    And
+    crush my foes with their might at my decree.
+
+'
+--- !u!114 &-5639173827435861812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4008, y: 1224}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -5639173827435861812}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -6767474109447217262}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -5639173827435861812}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 172772181372060240}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "On a stormy night with thunder and lightning, the fate of \xC1nslo
+    was forever changed. It was rumored that the palace guards had heard a heated
+    argument between the princess and the king. And when the sun rose the next day,
+    the princess had become the queen."
+--- !u!114 &-5239381144865836064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4552, y: -312}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: -5239381144865836064}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6445415284724879365}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: -5239381144865836064}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 781842179885929954}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: -5239381144865836064}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7687025399087949115}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_redHook
+--- !u!114 &-5194467012543602613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3656, y: 1928}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -5194467012543602613}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: 5002560404344250129}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -5194467012543602613}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5250362768844621920}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: 'The old man looked at you with a gaze full of meaning, as if
+    his wisdom, accumulated over years, caught a glimpse of the great willpower behind
+    you.
+
+'
+--- !u!114 &-4934470578833629629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1816, y: 280}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -4934470578833629629}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -943194308283637637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4934470578833629629}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8987734437062194659}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: "Although the king was known for his mercy, wisdom, and kindness,
+    he was not skilled in the art of war. In his desire for peace, he agreed to the
+    V\xE4rmstad king's proposal to marry his daughter, Princess Sabatina. However,
+    upon learning of this arrangement, Princess Sabatina vehemently refused her father's
+    proposal. The Raven family attempted to capture Princess Sabatina, but were ultimately
+    repelled by her loyal knights."
+--- !u!114 &-4916548962640756922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4696, y: -792}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -4916548962640756922}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -2367489328602925433}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4916548962640756922}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -114790881358711207}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue5
+  flagValue: 1
+--- !u!114 &-3722723717362284270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4120, y: 3624}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: -3722723717362284270}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 8399974639260544740}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: -3722723717362284270}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 779581326404623373}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: -3722723717362284270}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4429513007972502018}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_redHook
+--- !u!114 &-3201340794445624439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3736, y: -792}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -3201340794445624439}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: -8375252383086079086}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -3201340794445624439}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6581975859903913343}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: The elder first mate heaved a heavy sigh, as if every word he was
+    about to utter carried an immense weight upon his shoulders.
+--- !u!114 &-2367489328602925433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4424, y: -760}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -2367489328602925433}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6581975859903913343}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2367489328602925433}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4916548962640756922}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 5
+  clueChildId: 1
+--- !u!114 &-1753905847903893669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5304, y: 1480}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -1753905847903893669}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: 172772181372060240}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 7590845380088408219}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1753905847903893669}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4751497032725703832}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 7
+  clueChildId: 1
+--- !u!114 &-1234898636000048077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
+  m_Name: Description
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3816, y: -184}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -1234898636000048077}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: -8375252383086079086}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1234898636000048077}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6445415284724879365}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  descriptionText: 'The old man looked at you with a gaze full of meaning, as if
+    his wisdom, accumulated over years, caught a glimpse of the great willpower behind
+    you.
+
+'
+--- !u!114 &-943194308283637637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1544, y: 232}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -943194308283637637}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: -6530430630631573944}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -943194308283637637}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4934470578833629629}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "In times past, the people of \xC1nslo lived in peace and prosperity
+    under the wise rule of their king. However, their tranquil existence was disrupted
+    by the invasion of the neighboring kingdom of V\xE4rmstad. \r\n"
+--- !u!114 &-341663206006174628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7448, y: 840}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -341663206006174628}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -7936528789045750755}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -341663206006174628}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1196236944915690847}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: TrueEnd
+  flagValue: 1
+--- !u!114 &-114790881358711207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6424, y: 104}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: -114790881358711207}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 7687025399087949115}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 457951782045824660}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -4916548962640756922}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: -114790881358711207}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: -114790881358711207}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -8375252383086079086}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: -114790881358711207}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -7936528789045750755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - I still have some doubts
+  - That is all I need to know.
+  speakerType: 2
+  speakerName: 
+  DialogueText: The old man gazes at you patiently, as if awaiting your inquiry.
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f666e9546868f1459c6a1f92a08ad88, type: 3}
+  m_Name: Old_Firstmate
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 564763370978801575}
+  - {fileID: 1196236944915690847}
+  - {fileID: 7163020486724149343}
+  - {fileID: -6571712099784861114}
+  - {fileID: -943194308283637637}
+  - {fileID: -4934470578833629629}
+  - {fileID: 4990256808621688291}
+  - {fileID: -8375252383086079086}
+  - {fileID: -3201340794445624439}
+  - {fileID: 339987913208959832}
+  - {fileID: 8987734437062194659}
+  - {fileID: 5845923714041149799}
+  - {fileID: -6306361977482186597}
+  - {fileID: 8399974639260544740}
+  - {fileID: -3722723717362284270}
+  - {fileID: 779581326404623373}
+  - {fileID: 9109638659285113395}
+  - {fileID: 4089408121645783800}
+  - {fileID: 4429513007972502018}
+  - {fileID: 6581975859903913343}
+  - {fileID: -2367489328602925433}
+  - {fileID: -4916548962640756922}
+  - {fileID: 5366593966658504400}
+  - {fileID: -7001279889545732371}
+  - {fileID: 8152292340355178978}
+  - {fileID: 2904874194348527553}
+  - {fileID: 4691323570604484657}
+  - {fileID: 738641226645369226}
+  - {fileID: -7824294314670279222}
+  - {fileID: 5002560404344250129}
+  - {fileID: -5194467012543602613}
+  - {fileID: 5250362768844621920}
+  - {fileID: -8334504338726456283}
+  - {fileID: 6504163245362002300}
+  - {fileID: 4393547470859151758}
+  - {fileID: 3602028467956709362}
+  - {fileID: -5911417369938343908}
+  - {fileID: -6767474109447217262}
+  - {fileID: -5639173827435861812}
+  - {fileID: 172772181372060240}
+  - {fileID: 3529180976753384385}
+  - {fileID: 189671077318878182}
+  - {fileID: 7590845380088408219}
+  - {fileID: -1753905847903893669}
+  - {fileID: -1234898636000048077}
+  - {fileID: 6445415284724879365}
+  - {fileID: -5239381144865836064}
+  - {fileID: 781842179885929954}
+  - {fileID: -5766209131250798588}
+  - {fileID: 3517011938397713235}
+  - {fileID: 7687025399087949115}
+  - {fileID: 6685433173638810160}
+  - {fileID: 8462669292577975375}
+  - {fileID: 1915343197735879426}
+  - {fileID: 4811835669651653466}
+  - {fileID: 4504756199812826971}
+  - {fileID: 457951782045824660}
+  - {fileID: -114790881358711207}
+  - {fileID: -6530430630631573944}
+  - {fileID: 4751497032725703832}
+  - {fileID: -7936528789045750755}
+  - {fileID: 1807916077726166226}
+  - {fileID: -8580387519773443791}
+  - {fileID: 5288614527563996745}
+  - {fileID: 5318655738970426442}
+  - {fileID: -7804588907064888571}
+  - {fileID: -341663206006174628}
+  - {fileID: 7790052049518875834}
+  start: {fileID: 0}
+  current: {fileID: 0}
+  initNode: {fileID: 0}
+--- !u!114 &172772181372060240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4344, y: 1256}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 172772181372060240}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -5639173827435861812}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 172772181372060240}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3529180976753384385}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 172772181372060240}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1753905847903893669}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_redHook
+--- !u!114 &189671077318878182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4920, y: 1032}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 189671077318878182}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 3529180976753384385}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 189671077318878182}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7590845380088408219}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: 'Behold the ocean, a realm of liberty,
+
+    Where my will is sovereign,
+    unbound and free.
+
+    I''ll tame the fierce winds and the raging sea,
+
+    And
+    crush my foes with their might at my decree.
+
+'
+--- !u!114 &339987913208959832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2904, y: 2792}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    values:
+    - _fieldName: input
+      _node: {fileID: 339987913208959832}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: -7824294314670279222}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: 339987913208959832}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: 339987913208959832}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -6306361977482186597}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "Pray, how did Princess Sabatina become the Pirate Queen, and how did \xC1nslo
+    become the City of Freedom?"
+  speakerType: 1
+  speakerName: 
+  DialogueText: 
+--- !u!114 &457951782045824660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4545.6167, y: 274.38916}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 457951782045824660}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4504756199812826971}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 457951782045824660}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -114790881358711207}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue6
+  flagValue: 1
+--- !u!114 &564763370978801575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23137e6354ef6a42adb75c134b1e8b5, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 136, y: 200}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 564763370978801575}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6571712099784861114}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+--- !u!114 &738641226645369226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4472, y: 840}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 738641226645369226}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4691323570604484657}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 738641226645369226}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4751497032725703832}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue5
+  flagValue: 1
+--- !u!114 &779581326404623373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4376, y: 3464}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 779581326404623373}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -3722723717362284270}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 779581326404623373}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 9109638659285113395}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: As you turn to leave, you hear the venerable old first mate's voice
+    behind you, singing a haunting melody that seems to transport you back to the
+    days when the queen ruled the waves with fearless abandon.
+--- !u!114 &781842179885929954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4808, y: -472}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 781842179885929954}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -5239381144865836064}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 781842179885929954}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5766209131250798588}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: As you turn to leave, you hear the venerable old first mate's voice
+    behind you, singing a haunting melody that seems to transport you back to the
+    days when the queen ruled the waves with fearless abandon.
+--- !u!114 &1196236944915690847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eec6e4a73746a489ca0af75ccb4531, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7928, y: 1736}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1196236944915690847}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -341663206006174628}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -7804588907064888571}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 7790052049518875834}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+--- !u!114 &1807916077726166226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6829.7725, y: 1360.9204}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 1807916077726166226}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: 4751497032725703832}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1807916077726166226}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7804588907064888571}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Thank you, venerable First Mate. Every word you spoke is of utmost
+    importance to me.
+--- !u!114 &1915343197735879426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4245.8867, y: 2340.2385}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 1915343197735879426}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 8462669292577975375}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1915343197735879426}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5288614527563996745}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue6
+  flagValue: 1
+--- !u!114 &2904874194348527553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3864, y: 824}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 2904874194348527553}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 8152292340355178978}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2904874194348527553}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4691323570604484657}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "The cowardly act of the king during the war deeply wounded the princess,
+    and she, along with her loyal knights, took to the sea on a small fleet to raid
+    and pillage deep into V\xE4rmstad, cutting off their supply lines and causing
+    their retreat.\r\n The princess's actions proved that she was more capable than
+    the old king, and from then on, she no longer obeyed the king's commands. Sabatina
+    poured her fury onto the land of V\xE4rmstad, and even after the war had ended,
+    her revenge never ceased.\r\n"
+--- !u!114 &3517011938397713235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5480, y: -424}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 3517011938397713235}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -5766209131250798588}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3517011938397713235}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7687025399087949115}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue7
+  flagValue: 1
+--- !u!114 &3529180976753384385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4600, y: 1096}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 3529180976753384385}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 172772181372060240}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3529180976753384385}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 189671077318878182}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: As you turn to leave, you hear the venerable old first mate's voice
+    behind you, singing a haunting melody that seems to transport you back to the
+    days when the queen ruled the waves with fearless abandon.
+--- !u!114 &3602028467956709362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5256, y: 1848}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 3602028467956709362}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4393547470859151758}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3602028467956709362}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5911417369938343908}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue7
+  flagValue: 1
+--- !u!114 &4089408121645783800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5048, y: 3512}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4089408121645783800}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 9109638659285113395}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4089408121645783800}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4429513007972502018}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue7
+  flagValue: 1
+--- !u!114 &4393547470859151758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4904, y: 1736}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4393547470859151758}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6504163245362002300}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4393547470859151758}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3602028467956709362}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: 'Behold the ocean, a realm of liberty,
+
+    Where my will is sovereign,
+    unbound and free.
+
+    I''ll tame the fierce winds and the raging sea,
+
+    And
+    crush my foes with their might at my decree.
+
+'
+--- !u!114 &4429513007972502018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5080, y: 3848}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4429513007972502018}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: -3722723717362284270}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 4089408121645783800}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4429513007972502018}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8580387519773443791}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 7
+  clueChildId: 1
+--- !u!114 &4504756199812826971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4139.0566, y: 217.44727}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4504756199812826971}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4811835669651653466}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4504756199812826971}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 457951782045824660}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 6
+  clueChildId: 2
+--- !u!114 &4691323570604484657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4200, y: 872}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4691323570604484657}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 2904874194348527553}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4691323570604484657}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 738641226645369226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 5
+  clueChildId: 1
+--- !u!114 &4751497032725703832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6188.9873, y: 1121.1104}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 4751497032725703832}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -1753905847903893669}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 738641226645369226}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: 4751497032725703832}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: 4751497032725703832}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -7001279889545732371}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: 4751497032725703832}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 1807916077726166226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - I still have some doubts
+  - That is all I need to know.
+  speakerType: 2
+  speakerName: 
+  DialogueText: The old man gazes at you patiently, as if awaiting your inquiry.
+--- !u!114 &4811835669651653466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3795.73, y: 214.15063}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4811835669651653466}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 2
+        node: {fileID: -8375252383086079086}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4811835669651653466}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4504756199812826971}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "Her name is Hafnfrei\xF0r, the great liberator of the sea, was the
+    queen's flagship and once the mightiest ship of \xC1nslo. It was aboard this
+    vessel that the queen and her knights performed incredible feats of valor during
+    the war. After the conflict, Hafnfrei\xF0r became Princess Sabatina's flagship,
+    and when the legendary black sails were hoisted, neighboring nations trembled
+    with fear and awe."
+--- !u!114 &4990256808621688291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2360, y: 664}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4990256808621688291}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 5845923714041149799}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 4990256808621688291}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5366593966658504400}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 4990256808621688291}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7824294314670279222}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene2_showRespect
+--- !u!114 &5002560404344250129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2984, y: 1576}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 5002560404344250129}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -7824294314670279222}
+        reroutePoints: []
+      - fieldName: Answers 0
+        node: {fileID: 5288614527563996745}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: 5002560404344250129}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: 5002560404344250129}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -5194467012543602613}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: 5002560404344250129}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 6685433173638810160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "Pray, how did Princess Sabatina become the Pirate Queen, and how did \xC1nslo
+    become the City of Freedom?"
+  - Might I inquire about this vessel? I have heard that it was once the queen's
+    flagship. relationship between the princess and her father, the king.
+  speakerType: 1
+  speakerName: 
+  DialogueText: 
+--- !u!114 &5250362768844621920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3992, y: 1928}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 5250362768844621920}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -5194467012543602613}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 5250362768844621920}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8334504338726456283}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "On a stormy night with thunder and lightning, the fate of \xC1nslo
+    was forever changed. It was rumored that the palace guards had heard a heated
+    argument between the princess and the king. And when the sun rose the next day,
+    the princess had become the queen."
+--- !u!114 &5288614527563996745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5624, y: 2536}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    - Answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 5288614527563996745}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -5911417369938343908}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 1915343197735879426}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: 5288614527563996745}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: 5288614527563996745}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 5002560404344250129}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Answers 1
+      _node: {fileID: 5288614527563996745}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 5318655738970426442}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - I still have some doubts
+  - That is all I need to know.
+  speakerType: 2
+  speakerName: 
+  DialogueText: The old man gazes at you patiently, as if awaiting your inquiry.
+--- !u!114 &5318655738970426442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dcdd7d8d7282344a9ee7ae6e914550, type: 3}
+  m_Name: Player Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6520, y: 2520}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 5318655738970426442}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: 5288614527563996745}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 5318655738970426442}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7804588907064888571}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: Thank you, venerable First Mate. Every word you spoke is of utmost
+    importance to me.
+--- !u!114 &5366593966658504400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2617.0356, y: 428.01126}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 5366593966658504400}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 4990256808621688291}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 5366593966658504400}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8375252383086079086}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 5366593966658504400}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7001279889545732371}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_Taste_Balcksail
+--- !u!114 &5845923714041149799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2008, y: 680}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 5845923714041149799}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 8987734437062194659}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 5845923714041149799}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4990256808621688291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue4
+  flagValue: 1
+--- !u!114 &6445415284724879365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4216, y: -344}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6445415284724879365}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -1234898636000048077}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6445415284724879365}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5239381144865836064}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "On a stormy night with thunder and lightning, the fate of \xC1nslo
+    was forever changed. It was rumored that the palace guards had heard a heated
+    argument between the princess and the king. And when the sun rose the next day,
+    the princess had become the queen."
+--- !u!114 &6504163245362002300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4584, y: 1800}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6504163245362002300}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -8334504338726456283}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6504163245362002300}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4393547470859151758}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: As you turn to leave, you hear the venerable old first mate's voice
+    behind you, singing a haunting melody that seems to transport you back to the
+    days when the queen ruled the waves with fearless abandon.
+--- !u!114 &6581975859903913343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4088, y: -808}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6581975859903913343}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -3201340794445624439}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6581975859903913343}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2367489328602925433}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "The cowardly act of the king during the war deeply wounded the princess,
+    and she, along with her loyal knights, took to the sea on a small fleet to raid
+    and pillage deep into V\xE4rmstad, cutting off their supply lines and causing
+    their retreat.\r\n The princess's actions proved that she was more capable than
+    the old king, and from then on, she no longer obeyed the king's commands. Sabatina
+    poured her fury onto the land of V\xE4rmstad, and even after the war had ended,
+    her revenge never ceased.\r\n"
+--- !u!114 &6685433173638810160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3496, y: 2280}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6685433173638810160}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 1
+        node: {fileID: 5002560404344250129}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6685433173638810160}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8462669292577975375}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "Her name is Hafnfrei\xF0r, the great liberator of the sea, was the
+    queen's flagship and once the mightiest ship of \xC1nslo. It was aboard this
+    vessel that the queen and her knights performed incredible feats of valor during
+    the war. After the conflict, Hafnfrei\xF0r became Princess Sabatina's flagship,
+    and when the legendary black sails were hoisted, neighboring nations trembled
+    with fear and awe."
+--- !u!114 &7163020486724149343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 728, y: 392}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7163020486724149343}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -6571712099784861114}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7163020486724149343}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6530430630631573944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "Greetings, stranger in possession of Sigridsdottir coins. It is
+    my utmost pleasure to welcome you to Hafnfrei\xF0r, flagship of my esteemed master.
+    You are cordially invited to behold her past glory while in her presence."
+--- !u!114 &7590845380088408219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5272, y: 1144}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7590845380088408219}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 189671077318878182}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7590845380088408219}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1753905847903893669}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue7
+  flagValue: 1
+--- !u!114 &7687025399087949115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5512, y: -88}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7687025399087949115}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: -5239381144865836064}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 3517011938397713235}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7687025399087949115}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -114790881358711207}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 7
+  clueChildId: 1
+--- !u!114 &7790052049518875834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6936, y: 2872}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7790052049518875834}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -8580387519773443791}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7790052049518875834}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1196236944915690847}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: BadEnd
+  flagValue: 1
+--- !u!114 &8152292340355178978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3512, y: 840}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 8152292340355178978}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Answers 0
+        node: {fileID: -7001279889545732371}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8152292340355178978}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2904874194348527553}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: The elder first mate heaved a heavy sigh, as if every word he was
+    about to utter carried an immense weight upon his shoulders.
+--- !u!114 &8399974639260544740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3784, y: 3592}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 8399974639260544740}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -6306361977482186597}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8399974639260544740}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3722723717362284270}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "On a stormy night with thunder and lightning, the fate of \xC1nslo
+    was forever changed. It was rumored that the palace guards had heard a heated
+    argument between the princess and the king. And when the sun rose the next day,
+    the princess had become the queen."
+--- !u!114 &8462669292577975375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3839.3267, y: 2283.2966}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 8462669292577975375}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6685433173638810160}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8462669292577975375}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1915343197735879426}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 6
+  clueChildId: 2
+--- !u!114 &8987734437062194659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2072, y: 328}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 8987734437062194659}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -4934470578833629629}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8987734437062194659}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5845923714041149799}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 4
+  clueChildId: 3
+--- !u!114 &9109638659285113395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4696, y: 3400}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 9109638659285113395}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 779581326404623373}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 9109638659285113395}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4089408121645783800}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: 'Behold the ocean, a realm of liberty,
+
+    Where my will is sovereign,
+    unbound and free.
+
+    I''ll tame the fierce winds and the raging sea,
+
+    And
+    crush my foes with their might at my decree.
+
+'
