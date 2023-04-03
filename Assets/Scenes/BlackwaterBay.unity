@@ -1260,7 +1260,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380725125}
-  - component: {fileID: 380725126}
   m_Layer: 0
   m_Name: BlackSailsTravermEnterance
   m_TagString: Untagged
@@ -1285,18 +1284,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &380725126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380725123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116e0b07743724e9980431eb51bfed64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &401709738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1430,16 +1417,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &416222337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856211, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 1631501569}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &416222338 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856208, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 1631501569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418523577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,7 +2682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 662839814}
-  - component: {fileID: 662839813}
+  - component: {fileID: 662839815}
   m_Layer: 0
   m_Name: EndingSceneTeleport
   m_TagString: Untagged
@@ -2713,18 +2690,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &662839813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662839812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0924eb0771b90f47a0fecb94eb554f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &662839814
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,6 +2707,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &662839815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662839812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116e0b07743724e9980431eb51bfed64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &694344064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,8 +4536,6 @@ MonoBehaviour:
   speakerNameText: {fileID: 1108659762}
   dialogueText: {fileID: 785648880}
   descriptionText: {fileID: 29736308}
-  buttonContainer: {fileID: 416222337}
-  buttonParent: {fileID: 416222338}
   buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
   textDisplaySpeed: 0.01
 --- !u!1 &1239181241
