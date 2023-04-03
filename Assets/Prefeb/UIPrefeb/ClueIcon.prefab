@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6570475736230727363}
   - component: {fileID: 6570475736230727362}
   - component: {fileID: 2200565547094150694}
+  - component: {fileID: 2551037616370912945}
   m_Layer: 5
-  m_Name: PuzzleIcon
+  m_Name: ClueIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6570475736230727363
 CanvasRenderer:
@@ -89,3 +90,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e73fb793e81b549898557dd1327ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageSource: {fileID: 0}
+  clueImage: {fileID: 0}
+--- !u!95 &2551037616370912945
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570475736230727356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea60a7b991b97dd428e0c22e4a28b273, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

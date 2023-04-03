@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PuzzleIconTrigger : MonoBehaviour, IPointerClickHandler
+public class ClueIconTrigger : MonoBehaviour, IPointerClickHandler
 {
     public Sprite imageSource;
     public Image clueImage;
@@ -13,5 +13,6 @@ public class PuzzleIconTrigger : MonoBehaviour, IPointerClickHandler
     {
         clueImage.sprite = imageSource;
         clueImage.enabled = true;
+        GetComponent<Animator>().SetBool("Update", false);
     }
 }

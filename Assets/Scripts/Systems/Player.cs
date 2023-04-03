@@ -49,8 +49,8 @@ public class Player
 
     public void UpdateClue(int id, int childId)
     {
-        var pm = GameObject.Find("PuzzleManager");
-        var ps = pm.GetComponent<PuzzleSystem>();
+        var pm = GameObject.Find("ClueManager");
+        var ps = pm.GetComponent<ClueSystem>();
         if (playerClues.ContainsKey(id))
         {
             playerClues[id] = childId;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PuzzleSystem : MonoBehaviour
+public class ClueSystem : MonoBehaviour
 {
     public GameObject icon;
     public GameObject panel;
@@ -20,7 +20,8 @@ public class PuzzleSystem : MonoBehaviour
     public void UpdateClue(int id, int childId)
     {
         var clue = clues[id] as GameObject;
-        var trigger = clue.GetComponent<PuzzleIconTrigger>();
+        clue.GetComponent<Animator>().SetBool("Update", true);
+        var trigger = clue.GetComponent<ClueIconTrigger>();
 
         // NEED TO BE MODIFIED "UI/Clues/c"+id+"-"+childId
         trigger.imageSource = Resources.Load<Sprite>("UI/paper");
@@ -30,7 +31,7 @@ public class PuzzleSystem : MonoBehaviour
     {
         var clue = Instantiate(icon) as GameObject;
         clue.transform.SetParent(panel.transform, false);
-        var trigger = clue.GetComponent<PuzzleIconTrigger>();
+        var trigger = clue.GetComponent<ClueIconTrigger>();
 
         // NEED TO BE MODIFIED "UI/Clues/c"+id+"-"+childId
         trigger.imageSource = Resources.Load<Sprite>("UI/paper");
@@ -54,11 +55,9 @@ public class PuzzleSystem : MonoBehaviour
             print("space key was pressed");
             var createImage = Instantiate(icon) as GameObject;
             createImage.transform.SetParent(panel.transform, false);
-            var trigger = createImage.GetComponent<PuzzleIconTrigger>();
+            var trigger = createImage.GetComponent<ClueIconTrigger>();
             trigger.imageSource = Resources.Load<Sprite>("UI/paper");
             trigger.clueImage = clueImage;
         }
-
-        
     }
 }
