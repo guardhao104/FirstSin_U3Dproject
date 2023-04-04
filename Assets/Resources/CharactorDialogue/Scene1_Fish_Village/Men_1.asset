@@ -62,7 +62,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: Fish Men
+  speakerName: Fish Man
   dialogueLine: The recent fishing haul has been poor...
 --- !u!114 &7379306707913344156
 MonoBehaviour:

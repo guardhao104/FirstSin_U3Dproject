@@ -43,9 +43,9 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: Famale
-  dialogueLine: People say the owner of the Blackwater Bay Tavern is a cat who can
-    speak, and I definitely want to go there and see for myself.
+  speakerName: Old woman
+  dialogueLine: Stranger, would you not be interested in these exquisite jewels and
+    diamonds I have here?
 --- !u!114 &-2663682322208417034
 MonoBehaviour:
   m_ObjectHideFlags: 0

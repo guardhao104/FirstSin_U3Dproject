@@ -44,13 +44,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerName: Red Hook
-  dialogueLine: 'ate cast a disdainful glance at you, his eyes full of mockery and
-    contempt.
-
-    Yo ho ho, we meet again! So, what''s the word, mate? You satisfied
-    with Gertrude''s craftsmanship? Rumor has it she''s got royal blood running through
-    her veins, even if it ain''t direct. But with her exceptional talent, she''s
-    become quite the celebrity in the City of Freedom.'
+  dialogueLine: Yo ho ho, we meet again! So, what's the word, mate? You satisfied
+    with Gertrude's craftsmanship? Rumor has it she's got royal blood running through
+    her veins, even if it ain't direct. But with her exceptional talent, she's become
+    quite the celebrity in the City of Freedom.
 --- !u!114 &-1222114313512921346
 MonoBehaviour:
   m_ObjectHideFlags: 0
