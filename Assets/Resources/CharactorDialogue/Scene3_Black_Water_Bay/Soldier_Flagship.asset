@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: 24}
+  position: {x: -792, y: 8}
   ports:
     keys:
     - exit
@@ -54,8 +54,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: trueExit
-        node: {fileID: 7577758485185035680}
+      - fieldName: falseExit
+        node: {fileID: 5937542613071593334}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -75,6 +75,51 @@ MonoBehaviour:
       _dynamic: 0
   speakerName: Soldier
   dialogueLine: Show your respect when boarding!
+--- !u!114 &-1946008812871252958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: -248}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -1946008812871252958}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 5937542613071593334}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1946008812871252958}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8249223491263009335}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Soldier
+  dialogueLine: Stay away! It's busy ahead! NO ACCESS NOW!
 --- !u!114 &-1589618851549717491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +175,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f666e9546868f1459c6a1f92a08ad88, type: 3}
-  m_Name: Left_Soldier
+  m_Name: Soldier_Flagship
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -4262891108334665202}
@@ -138,9 +183,68 @@ MonoBehaviour:
   - {fileID: 7577758485185035680}
   - {fileID: -2622634156627075456}
   - {fileID: 8249223491263009335}
+  - {fileID: 5937542613071593334}
+  - {fileID: -1946008812871252958}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
+--- !u!114 &5937542613071593334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -280, y: -104}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 5937542613071593334}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 7577758485185035680}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 5937542613071593334}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1946008812871252958}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 5937542613071593334}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2622634156627075456}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene3_blockBlackBay
 --- !u!114 &7577758485185035680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +258,7 @@ MonoBehaviour:
   m_Name: Get Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 24}
+  position: {x: -552, y: 8}
   ports:
     keys:
     - input
@@ -179,7 +283,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2622634156627075456}
+        node: {fileID: 5937542613071593334}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -211,7 +315,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 256.5, y: 102.5}
+  position: {x: 328, y: 8}
   ports:
     keys:
     - entry
@@ -226,6 +330,9 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: exit
         node: {fileID: -1589618851549717491}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -1946008812871252958}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
