@@ -9,9 +9,11 @@ public class EndingSceneSystem : MonoBehaviour
     public VideoPlayer videoPlayer1;
     public string switchSceneName;
 
+    private ClueSystem clueSystem;
+
     private void Awake()
     {
-
+        clueSystem = GameObject.Find("ClueManager").GetComponent<ClueSystem>();
     }
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class EndingSceneSystem : MonoBehaviour
     {
         if (GameManager.player.GetFlag("Ending"))
         {
+            clueSystem.RemoveClues();
             PlayVideo();
         }
     }
