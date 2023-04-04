@@ -107,7 +107,7 @@ MonoBehaviour:
     sin. With all that you have gathered, I shall reshape this world according to
     your gathered.
 
-    (You can click to check every collected essences now)'
+    (You can click to check every collected essences now.)'
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   - {fileID: -1518486533452166544}
   - {fileID: -4266062245245912261}
   start: {fileID: 0}
-  current: {fileID: 0}
+  current: {fileID: -1518486533452166544}
   initNode: {fileID: 0}
 --- !u!114 &7274198245145195649
 MonoBehaviour:
