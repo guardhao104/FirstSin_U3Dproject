@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -122.72004, y: -18.243328}
+  position: {x: -88, y: -24}
   ports:
     keys:
     - input
@@ -44,7 +44,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerName: Soldier
-  dialogueLine: I don't have time for your nonsense. State your business or get lost.
+  dialogueLine: Can't you see I'm busy? Go mind your own business.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

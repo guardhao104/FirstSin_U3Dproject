@@ -44,7 +44,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerName: Soldier
-  dialogueLine: Don't just stand there, move along!
+  dialogueLine: A foreigner in Blackwater Bay, how rare.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
