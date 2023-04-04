@@ -103,9 +103,11 @@ MonoBehaviour:
   - Offer all essences.
   speakerType: 2
   speakerName: 
-  DialogueText: My faithful guardian, you have brought me the essences of the first
+  DialogueText: 'My faithful guardian, you have brought me the essences of the first
     sin. With all that you have gathered, I shall reshape this world according to
     your gathered.
+
+    (You can click to check every collected essences now)'
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
