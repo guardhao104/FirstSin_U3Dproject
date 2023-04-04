@@ -79,7 +79,7 @@ MonoBehaviour:
   - {fileID: 4718498704468564979}
   - {fileID: 6827745451087508696}
   start: {fileID: 0}
-  current: {fileID: 0}
+  current: {fileID: 1730909359150330513}
   initNode: {fileID: 0}
 --- !u!114 &1730909359150330513
 MonoBehaviour:
@@ -124,9 +124,9 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: "Anslo's \xFErymcyningc \rCyningc ofer Freonstad \r\nHronbrimman
+  dialogueLine: "Anslo's \xFErymcyningc \r\nCyningc ofer Freonstad \r\nHronbrimman
     st\xFDrende \r\nEaluflota eardian \r\nH\xE6fenduflodas freol\xE6cend \r\nSeofonstefnan
-    hlaford \r\nUngefr\xE6gefri\xF0a \r\n"
+    hlaford \r\nUngefr\xE6gefri\xF0a "
 --- !u!114 &4718498704468564979
 MonoBehaviour:
   m_ObjectHideFlags: 0

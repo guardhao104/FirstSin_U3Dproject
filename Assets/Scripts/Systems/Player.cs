@@ -53,8 +53,11 @@ public class Player
         var ps = pm.GetComponent<ClueSystem>();
         if (playerClues.ContainsKey(id))
         {
-            playerClues[id] = childId;
-            ps.UpdateClue(id, childId);
+            if (playerClues[id] != childId)
+            {
+                playerClues[id] = childId;
+                ps.UpdateClue(id, childId);
+            }
         }
         else
         {
