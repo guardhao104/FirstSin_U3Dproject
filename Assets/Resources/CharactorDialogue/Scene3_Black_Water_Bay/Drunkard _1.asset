@@ -24,7 +24,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1963046764934763754}
+        node: {fileID: 2896702259267655533}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 302.98, y: 54.35666}
+  position: {x: 312, y: 56}
   ports:
     keys:
     - entry
@@ -54,7 +54,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 1963046764934763754}
+        node: {fileID: 2896702259267655533}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -75,11 +75,11 @@ MonoBehaviour:
   nodes:
   - {fileID: -3465220859021645095}
   - {fileID: -1135319077865945572}
-  - {fileID: 1963046764934763754}
+  - {fileID: 2896702259267655533}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
---- !u!114 &1963046764934763754
+--- !u!114 &2896702259267655533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,18 +88,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
-  m_Name: Description
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -18.220005, y: 12.556656}
+  position: {x: -8, y: 56}
   ports:
     keys:
     - input
     - exit
     values:
     - _fieldName: input
-      _node: {fileID: 1963046764934763754}
+      _node: {fileID: 2896702259267655533}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -111,7 +111,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: exit
-      _node: {fileID: 1963046764934763754}
+      _node: {fileID: 2896702259267655533}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -122,4 +122,5 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  descriptionText: Whoa! Everything is spinning!
+  speakerName: Drunkard
+  dialogueLine: Whoa! Everything is spinning!
