@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: Choice Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 392, y: -104}
+  position: {x: 440, y: -40}
   ports:
     keys:
     - input
@@ -198,6 +198,52 @@ MonoBehaviour:
   speakerName: 
   DialogueText: From the man's attire, he appears to be a merchant in this place,
     and he may know something.
+--- !u!114 &-4325627576437656834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 552, y: 1144}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -4325627576437656834}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 487356724323322473}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4325627576437656834}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6381624938358055320}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Gunnar the Merchant
+  dialogueLine: Ahoy there, matey! Time to board the ship, ye scallywag. Ye be the
+    luckiest landlubber I've met this year.
 --- !u!114 &-3139312130803495883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +417,9 @@ MonoBehaviour:
   - {fileID: 317839015277258388}
   - {fileID: -2885728673251508962}
   - {fileID: 1597133088981152117}
+  - {fileID: 7553026262960375221}
+  - {fileID: 487356724323322473}
+  - {fileID: -4325627576437656834}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -419,6 +468,63 @@ MonoBehaviour:
       _dynamic: 0
   flagName: scene3_To_Ship
   flagValue: 1
+--- !u!114 &487356724323322473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -152, y: 936}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 487356724323322473}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 3901160166079176456}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 487356724323322473}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4325627576437656834}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 487356724323322473}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7628718188156808241}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene3_Merchant
 --- !u!114 &930428582503718410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +733,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: -40}
+  position: {x: 216, y: 136}
   ports:
     keys:
     - input
@@ -640,6 +746,9 @@ MonoBehaviour:
       connections:
       - fieldName: exit
         node: {fileID: 1114350269235813488}
+        reroutePoints: []
+      - fieldName: trueExit
+        node: {fileID: 7553026262960375221}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -698,7 +807,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 7628718188156808241}
+        node: {fileID: 487356724323322473}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -710,7 +819,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 7270695857291057120}
+        node: {fileID: 7553026262960375221}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -846,6 +955,9 @@ MonoBehaviour:
       - fieldName: exit
         node: {fileID: 317839015277258388}
         reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -4325627576437656834}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -863,7 +975,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 392}
+  position: {x: 120, y: 440}
   ports:
     keys:
     - input
@@ -875,7 +987,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: falseExit
-        node: {fileID: 3901160166079176456}
+        node: {fileID: 7553026262960375221}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -896,6 +1008,63 @@ MonoBehaviour:
   speakerName: Gunnar the Merchant
   dialogueLine: Ahoy there, mate! Ye look like ye don't need no supplies. What wind
     brings ye to these parts?
+--- !u!114 &7553026262960375221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -127.05155, y: 344.82605}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7553026262960375221}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: falseExit
+        node: {fileID: 3901160166079176456}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 7553026262960375221}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2382957560585935001}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 7553026262960375221}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7270695857291057120}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene3_Merchant
 --- !u!114 &7628718188156808241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,8 +1089,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: trueExit
-        node: {fileID: 3901160166079176456}
+      - fieldName: falseExit
+        node: {fileID: 487356724323322473}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

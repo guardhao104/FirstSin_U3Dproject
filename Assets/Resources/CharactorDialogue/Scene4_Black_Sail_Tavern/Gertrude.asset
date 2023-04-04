@@ -174,7 +174,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 957660087058066209}
+        node: {fileID: 9205561547423431700}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: We've got some of the finest rum and vodka you've ever tasted, just
     waiting for ya. And if you're feeling daring and have a few extra doubloons to
     spare, I can whip up a wicked "Black Sails" cocktail that'll knock your boots
@@ -620,7 +620,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: Arrr, I've heard a whisper of 'em, but if ye want to know more about
     the Red Ravens, I'd suggest ye pay a visit to Gunnar at the port. He's got his
     ear to the ground and knows all sorts of details.
@@ -706,10 +706,10 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: "Hafnfrei\xF0r is only open during pirate council meetings, and we
     don't usually receive outsiders. But hey, there's always an exception to the
-    rule. Stranger, remember that you owe me a favor.\""
+    rule. Stranger, remember that you owe me a favor."
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +752,8 @@ MonoBehaviour:
   - {fileID: -8611815428221626729}
   - {fileID: -3544815327760026202}
   - {fileID: 3503964515459172750}
+  - {fileID: 9205561547423431700}
+  - {fileID: 2732537065982493596}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -782,6 +784,9 @@ MonoBehaviour:
       - fieldName: Answers 0
         node: {fileID: 957660087058066209}
         reroutePoints: []
+      - fieldName: Answers 0
+        node: {fileID: 2732537065982493596}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -798,7 +803,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: Black Sail Publican
+  speakerName: Gertrude
   dialogueLine: "As the legend goes, it was a war of aggression launched by V\xE4rmstad,
     allegedly provoked by the rejection of their king's marriage proposal to Princess
     Sabatina. Yet, in the end, it was the valiant resistance of Sabatina and her
@@ -830,8 +835,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: trueExit
-        node: {fileID: -7052081488165051742}
+      - fieldName: falseExit
+        node: {fileID: 9205561547423431700}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -955,6 +960,67 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+--- !u!114 &2732537065982493596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37012114b5ea9be40ba634e31796dcd8, type: 3}
+  m_Name: Choice Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: 1128}
+  ports:
+    keys:
+    - input
+    - Answers
+    - Answers 0
+    values:
+    - _fieldName: input
+      _node: {fileID: 2732537065982493596}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: 9205561547423431700}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers
+      _node: {fileID: 2732537065982493596}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Answers 0
+      _node: {fileID: 2732537065982493596}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 734306380243868131}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Answers:
+  - "I am still quite curious about the events that transpired between Anslo and
+    V\xE4rmstad in the past."
+  speakerType: 1
+  speakerName: 
+  DialogueText: Thank you for your assistance, my lovely lady. I have indeed learned
+    the ins and outs of the Red Raven family's history.
 --- !u!114 &3268808511574640234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1202,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: 'Perhaps fortune will favor you, and you shall have the honor of
     meeting the faithful crews of the Pirate Queen, still residing within its mighty
     hull.
@@ -1260,7 +1326,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: This is the favorite drink of our pirate queen Sabatina Sigridsdottir
     Ragnarson, and it is said that the highest reward at the time was to have the
     Black Sails cocktail personally crafted by the queen herself.
@@ -1352,7 +1418,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  speakerName: 'Gertrude Black Sail Publican '
+  speakerName: Gertrude
   dialogueLine: "Ahoy, my dear! If you just returned from Blackwater Bay, then surely
     you must have seen that magnificent vessel - Hafnfrei\xF0r. It's the flagship
     of the former Pirate Queen Sabatina, now retired and docked as a symbol of her
@@ -1450,3 +1516,60 @@ MonoBehaviour:
   dialogueLine: The drink had a deep amber hue and a salty, herbal aroma that evoked
     the crashing waves of the open sea. With just one sip, it sent a fiery warmth
     coursing through the drinker's veins and left a lingering, bittersweet aftertaste.
+--- !u!114 &9205561547423431700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -103.527336, y: 773.5202}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 9205561547423431700}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: trueExit
+        node: {fileID: -7052081488165051742}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 9205561547423431700}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2732537065982493596}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 9205561547423431700}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 957660087058066209}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene4_Coin
