@@ -38,4 +38,13 @@ public class ClueSystem : MonoBehaviour
         clues.Add(id, clue);
         soundEffect.Play();
     }
+
+    public void RemoveClues()
+    {
+        foreach(KeyValuePair<int, GameObject> clue in clues)
+        {
+            Destroy(clue.Value);
+            clues = new Dictionary<int, GameObject>();
+        }
+    }
 }
