@@ -24,7 +24,15 @@ public class BlockQueenSquareTeleport : MonoBehaviour
 
     private bool CheckTPState()
     {
-        return GameManager.player.GetFlag("scene2_noRespect");
+        if (GameManager.player.GetFlag("scene2_showRespect"))
+        {
+            return true;
+        }
+        else if (GameManager.player.GetFlag("scene2_noRespect"))
+        {
+            return true;
+        }
+        return false;
     }
 
     private void BlockTP()
