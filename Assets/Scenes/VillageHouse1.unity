@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 18042465}
   - component: {fileID: 18042464}
   m_Layer: 0
-  m_Name: NPC_3_Male
+  m_Name: NPC_1_Famale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: c5503047d99779b4c9ed9cb6484acae1, type: 2}
+  - {fileID: 11400000, guid: ee5efa39d9d00ae44a16d352fd61fd99, type: 2}
 --- !u!61 &18042465
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1194,7 +1194,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: 7dee555e9a5e4844cbc0a949bf9ab24a, type: 2}
+  - {fileID: 11400000, guid: 158e7d9ec7e3e31458f32290b0d264aa, type: 2}
 --- !u!61 &337364301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5039,7 +5039,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: 7dee555e9a5e4844cbc0a949bf9ab24a, type: 2}
+  - {fileID: 11400000, guid: 67a5bfa4ca4f7b5488847c480d6ab659, type: 2}
 --- !u!61 &963786616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5278,7 +5278,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: 7dee555e9a5e4844cbc0a949bf9ab24a, type: 2}
+  - {fileID: 11400000, guid: 3a42f09c7b18c1549a73ea08e05d1503, type: 2}
 --- !u!61 &1002514675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7174,7 +7174,7 @@ MonoBehaviour:
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
   graph:
-  - {fileID: 11400000, guid: 7dee555e9a5e4844cbc0a949bf9ab24a, type: 2}
+  - {fileID: 11400000, guid: 4d501c32e41c642439d67b54a1b99b00, type: 2}
 --- !u!61 &1595369716
 BoxCollider2D:
   m_ObjectHideFlags: 0
