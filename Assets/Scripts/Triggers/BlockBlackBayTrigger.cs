@@ -8,11 +8,8 @@ public class BlockBlackBayTrigger : MonoBehaviour
     public GameObject leftBorder;
     public GameObject rightBorder;
 
-    private Vector3 rightBorderPos;
-
     void Awake()
     {
-        rightBorderPos = rightBorder.transform.position;
         if (GameManager.player.GetFlag("scene3_blockBlackBay"))
         {
             gameObject.SetActive(true);
@@ -26,14 +23,6 @@ public class BlockBlackBayTrigger : MonoBehaviour
             {
                 rightBorder.transform.position = soldier.transform.position;
             }
-        }
-    }
-
-    void Update()
-    {
-        if (GameManager.player.GetFlag("scene3_allowFlagship"))
-        {
-            rightBorder.transform.position = rightBorderPos;
         }
     }
 }

@@ -524,7 +524,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  flagName: scene3_Merchant
+  flagName: scene3_To_Ship
 --- !u!114 &930428582503718410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,16 +947,16 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -6651894606528913261}
-        reroutePoints: []
-      - fieldName: exit
-        node: {fileID: -3139312130803495883}
-        reroutePoints: []
-      - fieldName: exit
         node: {fileID: 317839015277258388}
         reroutePoints: []
       - fieldName: exit
         node: {fileID: -4325627576437656834}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -6651894606528913261}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -3139312130803495883}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
