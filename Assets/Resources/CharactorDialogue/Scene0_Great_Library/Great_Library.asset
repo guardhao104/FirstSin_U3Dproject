@@ -126,8 +126,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: input
-        node: {fileID: 3246905656994702291}
+      - fieldName: entry
+        node: {fileID: -107558493902583387}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 984, y: 136}
+  position: {x: 1160, y: 264}
   ports:
     keys:
     - entry
@@ -204,6 +204,9 @@ MonoBehaviour:
       connections:
       - fieldName: exit
         node: {fileID: 3246905656994702291}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -3433670406450622386}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -362,7 +365,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: 216}
+  position: {x: 728, y: 408}
   ports:
     keys:
     - input
@@ -375,9 +378,6 @@ MonoBehaviour:
       connections:
       - fieldName: trueExit
         node: {fileID: 1559649806774573136}
-        reroutePoints: []
-      - fieldName: exit
-        node: {fileID: -3433670406450622386}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

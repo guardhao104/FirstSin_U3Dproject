@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: Set Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1192, y: 8}
+  position: {x: 1400, y: -8}
   ports:
     keys:
     - input
@@ -211,7 +211,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 3197327056568543477}
+        node: {fileID: -4698673645748909037}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -231,6 +231,51 @@ MonoBehaviour:
       _dynamic: 0
   flagName: scene2_showRespect
   flagValue: 1
+--- !u!114 &-4698673645748909037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1064, y: 8}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -4698673645748909037}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 3197327056568543477}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4698673645748909037}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5048697443563786427}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 2
+  clueChildId: 1
 --- !u!114 &-4458078881462949322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +556,7 @@ MonoBehaviour:
   - {fileID: -4005212396255599146}
   - {fileID: -963527672255091401}
   - {fileID: 3554996554626019376}
+  - {fileID: -4698673645748909037}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -646,7 +692,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5048697443563786427}
+        node: {fileID: -4698673645748909037}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

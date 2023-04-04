@@ -1,154 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8760726104805809540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06eec6e4a73746a489ca0af75ccb4531, type: 3}
-  m_Name: Exit
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 760, y: 200}
-  ports:
-    keys:
-    - entry
-    values:
-    - _fieldName: entry
-      _node: {fileID: -8760726104805809540}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: 4519518975727003618}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
---- !u!114 &-67993697222595777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
-  m_Name: Library Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 136, y: 88}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: -67993697222595777}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: 6271601814036687613}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: -67993697222595777}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 4519518975727003618}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  dialogueLine: 'You stride across the threshold of the sprawling square, the city''s
-    most arresting and singular sight. Amidst the grime and chaos of this pirate
-    haven, the Queen''s Square blazes like a lotus in murky waters. At the heart
-    of it all stands a towering statue of a lady, crafted from marble, her feet atop
-    a glittering hoard of silver and gold. In one hand, she grips a cutlass, and
-    with the other, she points into the distance, as if guiding ships to safe harbor. '
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f666e9546868f1459c6a1f92a08ad88, type: 3}
-  m_Name: Narration
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 6271601814036687613}
-  - {fileID: -8760726104805809540}
-  - {fileID: -67993697222595777}
-  - {fileID: 4519518975727003618}
-  start: {fileID: 0}
-  current: {fileID: 0}
-  initNode: {fileID: 0}
---- !u!114 &4519518975727003618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
-  m_Name: Library Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 456, y: 120}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: 4519518975727003618}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: -67993697222595777}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 4519518975727003618}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -8760726104805809540}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  dialogueLine: "\rUpon her shoulder perches a black parrot, its feathers glossy
-    as ink. And behind her, a pirate flag flaps in the breeze, an emblem of the daring
-    and danger that pervades these shores. But even the most impetuous of pirates
-    pause before her, tipping their hats in deference to her power and poise. For
-    this lady of stone commands respect, even from those who live and die by the
-    sea.\r\n"
---- !u!114 &6271601814036687613
+--- !u!114 &-2567101127549734379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,20 +13,207 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -152, y: 136}
+  position: {x: -808, y: 248}
   ports:
     keys:
     - exit
     values:
     - _fieldName: exit
-      _node: {fileID: 6271601814036687613}
+      _node: {fileID: -2567101127549734379}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -67993697222595777}
+        node: {fileID: 1730909359150330513}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+--- !u!114 &-364783640898615057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eec6e4a73746a489ca0af75ccb4531, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 904, y: 376}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -364783640898615057}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6827745451087508696}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f666e9546868f1459c6a1f92a08ad88, type: 3}
+  m_Name: statue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2567101127549734379}
+  - {fileID: -364783640898615057}
+  - {fileID: 1730909359150330513}
+  - {fileID: 4718498704468564979}
+  - {fileID: 6827745451087508696}
+  start: {fileID: 0}
+  current: {fileID: 0}
+  initNode: {fileID: 0}
+--- !u!114 &1730909359150330513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -344, y: 456}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 1730909359150330513}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -2567101127549734379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1730909359150330513}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4718498704468564979}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: "Anslo's \xFErymcyningc \rCyningc ofer Freonstad \r\nHronbrimman
+    st\xFDrende \r\nEaluflota eardian \r\nH\xE6fenduflodas freol\xE6cend \r\nSeofonstefnan
+    hlaford \r\nUngefr\xE6gefri\xF0a \r\n"
+--- !u!114 &4718498704468564979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 392}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 4718498704468564979}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 1730909359150330513}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4718498704468564979}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6827745451087508696}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 3
+  clueChildId: 1
+--- !u!114 &6827745451087508696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: 440}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6827745451087508696}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 4718498704468564979}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6827745451087508696}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -364783640898615057}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene2_Status
+  flagValue: 1

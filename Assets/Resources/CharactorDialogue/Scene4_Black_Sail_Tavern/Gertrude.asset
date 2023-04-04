@@ -25,7 +25,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -1910350112814513068}
+        node: {fileID: 3503964515459172750}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: Get Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -168, y: 152}
+  position: {x: -104, y: -296}
   ports:
     keys:
     - input
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -104, y: -88}
+  position: {x: -104, y: 184}
   ports:
     keys:
     - input
@@ -336,6 +336,51 @@ MonoBehaviour:
     waiting for ya. And if you're feeling daring and have a few extra doubloons to
     spare, I can whip up a wicked "Black Sails" cocktail that'll knock your boots
     off!
+--- !u!114 &-3544815327760026202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1992, y: 936}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -3544815327760026202}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -74632377715865860}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -3544815327760026202}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5187286807397198749}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 6
+  clueChildId: 1
 --- !u!114 &-3245726171862007267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +451,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1512, y: 712}
+  position: {x: 1384, y: 728}
   ports:
     keys:
     - input
@@ -418,7 +463,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 5452518999728036264}
+        node: {fileID: 734306380243868131}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -430,7 +475,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -8611815428221626729}
+        node: {fileID: 3503964515459172750}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -498,7 +543,7 @@ MonoBehaviour:
   m_Name: Library Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1160, y: -360}
+  position: {x: 1288, y: -280}
   ports:
     keys:
     - input
@@ -592,7 +637,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2744, y: 344}
+  position: {x: 3160, y: -248}
   ports:
     keys:
     - entry
@@ -655,7 +700,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5187286807397198749}
+        node: {fileID: -3544815327760026202}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -699,13 +744,14 @@ MonoBehaviour:
   - {fileID: -1753420117419891690}
   - {fileID: 734306380243868131}
   - {fileID: 6279718795893583268}
-  - {fileID: 5452518999728036264}
   - {fileID: -1910350112814513068}
   - {fileID: 3648787204674857374}
   - {fileID: 3343029008933841181}
   - {fileID: -74632377715865860}
   - {fileID: 5187286807397198749}
   - {fileID: -8611815428221626729}
+  - {fileID: -3544815327760026202}
+  - {fileID: 3503964515459172750}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -746,7 +792,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5452518999728036264}
+        node: {fileID: -1910350112814513068}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -771,7 +817,7 @@ MonoBehaviour:
   m_Name: Choice Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 392, y: 632}
+  position: {x: 360, y: 712}
   ports:
     keys:
     - input
@@ -1002,6 +1048,51 @@ MonoBehaviour:
   dialogueLine: "Gertrude tossed a gold coin your way and winked at you.\nThe gold
     coin is adorned with an ancient golden color, and it bears a carved image of
     a skull. \n"
+--- !u!114 &3503964515459172750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1d3010bdef9e419f63b826aa1d235, type: 3}
+  m_Name: Set Clue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1864, y: 728}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 3503964515459172750}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -1910350112814513068}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3503964515459172750}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8611815428221626729}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  clueId: 2
+  clueChildId: 2
 --- !u!114 &3648787204674857374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,7 +1277,7 @@ MonoBehaviour:
   m_Name: Set Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2264, y: 760}
+  position: {x: 2440, y: 936}
   ports:
     keys:
     - input
@@ -1198,7 +1289,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -74632377715865860}
+        node: {fileID: -3544815327760026202}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1217,51 +1308,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   flagName: scene4_Coin
-  flagValue: 1
---- !u!114 &5452518999728036264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
-  m_Name: Set Flag
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1160, y: 712}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: 5452518999728036264}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: 734306380243868131}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 5452518999728036264}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -1910350112814513068}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  flagName: scene4_War_History
   flagValue: 1
 --- !u!114 &6279718795893583268
 MonoBehaviour:
