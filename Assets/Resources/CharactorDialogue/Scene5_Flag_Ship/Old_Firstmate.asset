@@ -233,7 +233,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -341663206006174628}
+        node: {fileID: 7400564664376882823}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -328,6 +328,9 @@ MonoBehaviour:
       - fieldName: exit
         node: {fileID: 5318655738970426442}
         reroutePoints: []
+      - fieldName: falseExit
+        node: {fileID: 7400564664376882823}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -337,8 +340,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 1196236944915690847}
+      - fieldName: input
+        node: {fileID: -6677133277519026873}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -473,6 +476,57 @@ MonoBehaviour:
     you.
 
 '
+--- !u!114 &-6677133277519026873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da2421f7565f0489d41fc37e3a6267, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8008, y: 1944}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -6677133277519026873}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 7790052049518875834}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -7804588907064888571}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: -341663206006174628}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -6677133277519026873}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1196236944915690847}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: scene3_blockBlackBay
+  flagValue: 1
 --- !u!114 &-6571712099784861114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,8 +1346,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: exit
-        node: {fileID: -7936528789045750755}
+      - fieldName: trueExit
+        node: {fileID: 7400564664376882823}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1304,8 +1358,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 1196236944915690847}
+      - fieldName: input
+        node: {fileID: -6677133277519026873}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1473,6 +1527,8 @@ MonoBehaviour:
   - {fileID: -7804588907064888571}
   - {fileID: -341663206006174628}
   - {fileID: 7790052049518875834}
+  - {fileID: -6677133277519026873}
+  - {fileID: 7400564664376882823}
   start: {fileID: 0}
   current: {fileID: 0}
   initNode: {fileID: 0}
@@ -1874,7 +1930,7 @@ MonoBehaviour:
   m_Name: Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 7928, y: 1736}
+  position: {x: 8472, y: 1944}
   ports:
     keys:
     - entry
@@ -1885,13 +1941,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -341663206006174628}
-        reroutePoints: []
-      - fieldName: exit
-        node: {fileID: -7804588907064888571}
-        reroutePoints: []
-      - fieldName: exit
-        node: {fileID: 7790052049518875834}
+        node: {fileID: -6677133277519026873}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3186,6 +3236,63 @@ MonoBehaviour:
   dialogueLine: "Greetings, stranger in possession of Sigridsdottir coins. It is
     my utmost pleasure to welcome you to Hafnfrei\xF0r, flagship of my esteemed master.
     You are cordially invited to behold her past glory while in her presence."
+--- !u!114 &7400564664376882823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588f975884a53d94c9995f17b4c37cb7, type: 3}
+  m_Name: Get Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7208, y: 968}
+  ports:
+    keys:
+    - input
+    - trueExit
+    - falseExit
+    values:
+    - _fieldName: input
+      _node: {fileID: 7400564664376882823}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -7936528789045750755}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: trueExit
+      _node: {fileID: 7400564664376882823}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -341663206006174628}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: falseExit
+      _node: {fileID: 7400564664376882823}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7804588907064888571}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  flagName: Clue7
 --- !u!114 &7590845380088408219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3315,8 +3422,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: entry
-        node: {fileID: 1196236944915690847}
+      - fieldName: input
+        node: {fileID: -6677133277519026873}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
