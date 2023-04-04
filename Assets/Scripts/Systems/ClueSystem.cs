@@ -8,6 +8,7 @@ public class ClueSystem : MonoBehaviour
     public GameObject icon;
     public GameObject panel;
     public Image clueImage;
+    public AudioSource soundEffect;
 
     private Dictionary<int, GameObject> clues = new Dictionary<int, GameObject>();
 
@@ -22,9 +23,8 @@ public class ClueSystem : MonoBehaviour
         var clue = clues[id] as GameObject;
         clue.GetComponent<Animator>().SetBool("Update", true);
         var trigger = clue.GetComponent<ClueIconTrigger>();
-
-        // NEED TO BE MODIFIED "UI/Clues/c"+id+"-"+childId
-        trigger.imageSource = Resources.Load<Sprite>("UI/paper");
+        trigger.imageSource = Resources.Load<Sprite>("UI/Clues/" + id + "-" + childId);
+        soundEffect.Play();
     }
 
     public void InsertClue(int id, int childId)
@@ -32,32 +32,10 @@ public class ClueSystem : MonoBehaviour
         var clue = Instantiate(icon) as GameObject;
         clue.transform.SetParent(panel.transform, false);
         var trigger = clue.GetComponent<ClueIconTrigger>();
-
-        // NEED TO BE MODIFIED "UI/Clues/c"+id+"-"+childId
-        trigger.imageSource = Resources.Load<Sprite>("UI/paper");
+        trigger.imageSource = Resources.Load<Sprite>("UI/Clues/" + id + "-" + childId);
         trigger.clueImage = clueImage;
 
         clues.Add(id, clue);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // JUST FOR TEST! NEED TO BE DELETED!
-        if (Input.GetKeyDown("space"))
-        {
-            print("space key was pressed");
-            var createImage = Instantiate(icon) as GameObject;
-            createImage.transform.SetParent(panel.transform, false);
-            var trigger = createImage.GetComponent<ClueIconTrigger>();
-            trigger.imageSource = Resources.Load<Sprite>("UI/paper");
-            trigger.clueImage = clueImage;
-        }
+        soundEffect.Play();
     }
 }
