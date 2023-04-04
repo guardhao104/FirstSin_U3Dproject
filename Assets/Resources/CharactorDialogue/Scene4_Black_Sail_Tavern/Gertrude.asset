@@ -239,8 +239,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  dialogueLine: '"Have you ever heard of the Red Raven family?" you ask as you pull
-    out the emblem of a red raven from your pocket.'
+  dialogueLine: "Have you ever heard of the Red Raven family? \n(You ask as you pull
+    out the emblem of a red raven from your pocket.)"
 --- !u!114 &-5552179749363620070
 MonoBehaviour:
   m_ObjectHideFlags: 0

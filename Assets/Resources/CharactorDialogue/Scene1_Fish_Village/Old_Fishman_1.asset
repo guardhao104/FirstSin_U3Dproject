@@ -401,7 +401,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   Answers:
-  - The Black Flag? What happened, Old man?
+  - The Black Flag? What happened, old man?
   - Is there anything I can do for you old man?
   speakerType: 1
   speakerName: 
@@ -537,7 +537,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   Answers:
-  - The Black Flag? What happened, Old man?
+  - The Black Flag? What happened, old man?
   - Is there anything I can do for you old man?
   - Thank you for the inforamtion, old man.
   speakerType: 1
