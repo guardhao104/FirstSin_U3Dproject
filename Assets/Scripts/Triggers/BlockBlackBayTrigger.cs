@@ -13,7 +13,7 @@ public class BlockBlackBayTrigger : MonoBehaviour
         if (GameManager.player.GetFlag("scene3_blockBlackBay"))
         {
             gameObject.SetActive(true);
-            soldier.transform.rotation = Vector3.zero;
+            soldier.transform.Rotate(0, 180, 0);
             leftBorder.transform.position = soldier.transform.position;
         }
         else

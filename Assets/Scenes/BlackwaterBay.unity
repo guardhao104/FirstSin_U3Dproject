@@ -5896,8 +5896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d84d9066abc74fbbb19c33dfabcbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftSoldier: {fileID: 1589781311}
-  rightSoldier: {fileID: 976277398}
+  soldier: {fileID: 1589781311}
   leftBorder: {fileID: 346406891}
   rightBorder: {fileID: 361743906}
 --- !u!1001 &1235109101
