@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8532652763222846406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
+  m_Name: Library Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -536, y: 584}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: -8532652763222846406}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -2567101127549734379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -8532652763222846406}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4718498704468564979}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueLine: "\xC1nslo's \xFErymcyningc \r\nCyningc ofer Freonstad \r\nHronbrimman
+    st\xFDrende \r\nEaluflota eardian \r\nH\xE6fenduflodas freol\xE6cend \r\nSeofonstefnan
+    hlaford \r\nUngefr\xE6gefri\xF0a "
 --- !u!114 &-2567101127549734379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,7 +70,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1730909359150330513}
+        node: {fileID: -8532652763222846406}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -75,58 +121,12 @@ MonoBehaviour:
   nodes:
   - {fileID: -2567101127549734379}
   - {fileID: -364783640898615057}
-  - {fileID: 1730909359150330513}
   - {fileID: 4718498704468564979}
   - {fileID: 6827745451087508696}
+  - {fileID: -8532652763222846406}
   start: {fileID: 0}
-  current: {fileID: 1730909359150330513}
+  current: {fileID: 4718498704468564979}
   initNode: {fileID: 0}
---- !u!114 &1730909359150330513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002580b37dde7874aa840575f1dd7037, type: 3}
-  m_Name: Library Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -344, y: 456}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: 1730909359150330513}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: -2567101127549734379}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 1730909359150330513}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 4718498704468564979}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  dialogueLine: "Anslo's \xFErymcyningc \r\nCyningc ofer Freonstad \r\nHronbrimman
-    st\xFDrende \r\nEaluflota eardian \r\nH\xE6fenduflodas freol\xE6cend \r\nSeofonstefnan
-    hlaford \r\nUngefr\xE6gefri\xF0a "
 --- !u!114 &4718498704468564979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 1730909359150330513}
+        node: {fileID: -8532652763222846406}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

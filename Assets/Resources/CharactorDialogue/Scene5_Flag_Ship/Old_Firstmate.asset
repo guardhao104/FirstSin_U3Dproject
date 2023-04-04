@@ -938,55 +938,6 @@ MonoBehaviour:
     you.
 
 '
---- !u!114 &-4934470578833629629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b700e608e2614ea42b23955b2ff74383, type: 3}
-  m_Name: Description
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1816, y: 280}
-  ports:
-    keys:
-    - input
-    - exit
-    values:
-    - _fieldName: input
-      _node: {fileID: -4934470578833629629}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: exit
-        node: {fileID: -943194308283637637}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: -4934470578833629629}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 8987734437062194659}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  descriptionText: "Although the king was known for his mercy, wisdom, and kindness,
-    he was not skilled in the art of war. In his desire for peace, he agreed to the
-    V\xE4rmstad king's proposal to marry his daughter, Princess Sabatina. However,
-    upon learning of this arrangement, Princess Sabatina vehemently refused her father's
-    proposal. The Raven family attempted to capture Princess Sabatina, but were ultimately
-    repelled by her loyal knights."
 --- !u!114 &-4916548962640756922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,7 +1263,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -4934470578833629629}
+        node: {fileID: 6595813567977370461}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1464,7 +1415,6 @@ MonoBehaviour:
   - {fileID: 7163020486724149343}
   - {fileID: -6571712099784861114}
   - {fileID: -943194308283637637}
-  - {fileID: -4934470578833629629}
   - {fileID: 4990256808621688291}
   - {fileID: -8375252383086079086}
   - {fileID: -3201340794445624439}
@@ -1529,8 +1479,9 @@ MonoBehaviour:
   - {fileID: 7790052049518875834}
   - {fileID: -6677133277519026873}
   - {fileID: 7400564664376882823}
+  - {fileID: 6595813567977370461}
   start: {fileID: 0}
-  current: {fileID: 0}
+  current: {fileID: 8987734437062194659}
   initNode: {fileID: 0}
 --- !u!114 &172772181372060240
 MonoBehaviour:
@@ -3139,6 +3090,56 @@ MonoBehaviour:
     the old king, and from then on, she no longer obeyed the king's commands. Sabatina
     poured her fury onto the land of V\xE4rmstad, and even after the war had ended,
     her revenge never ceased.\r\n"
+--- !u!114 &6595813567977370461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21d53cb8f186a4cb1923278dee00c0, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1832, y: 328}
+  ports:
+    keys:
+    - input
+    - exit
+    values:
+    - _fieldName: input
+      _node: {fileID: 6595813567977370461}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -943194308283637637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6595813567977370461}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8987734437062194659}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerName: Old First Mate
+  dialogueLine: "Although the king was known for his mercy, wisdom, and kindness,
+    he was not skilled in the art of war. In his desire for peace, he agreed to the
+    V\xE4rmstad king's proposal to marry his daughter, Princess Sabatina. However,
+    upon learning of this arrangement, Princess Sabatina vehemently refused her father's
+    proposal. The Raven family attempted to capture Princess Sabatina, but were ultimately
+    repelled by her loyal knights."
 --- !u!114 &6685433173638810160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,7 +3595,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -4934470578833629629}
+        node: {fileID: 6595813567977370461}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
