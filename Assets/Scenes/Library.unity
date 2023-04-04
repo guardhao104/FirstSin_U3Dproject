@@ -1573,16 +1573,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
---- !u!224 &834647711 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856208, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 834647710}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &834647712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3701486992569856211, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
-  m_PrefabInstance: {fileID: 834647710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &834647713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3701486991161104721, guid: 49c0b5ff110cdd241badb62dfea8c46f, type: 3}
@@ -1701,7 +1691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0452b1d8db0de41fcac25c7372e6d83c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b725a9a4f86537a42b6569c31ee578c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2120,8 +2110,6 @@ MonoBehaviour:
   speakerNameText: {fileID: 834647715}
   dialogueText: {fileID: 834647714}
   descriptionText: {fileID: 834647713}
-  buttonContainer: {fileID: 834647712}
-  buttonParent: {fileID: 834647711}
   buttonPrefab: {fileID: 3365769474238233701, guid: 4de025aee58b02e40a21f1e22311b3ac, type: 3}
   textDisplaySpeed: 0.01
 --- !u!1 &1212465337
