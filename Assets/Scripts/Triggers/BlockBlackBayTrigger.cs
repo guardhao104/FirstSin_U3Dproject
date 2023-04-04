@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BlockBlackBayTrigger : MonoBehaviour
 {
-    public GameObject leftSoldier;
-    public GameObject rightSoldier;
+    public GameObject soldier;
     public GameObject leftBorder;
     public GameObject rightBorder;
 
@@ -14,15 +13,15 @@ public class BlockBlackBayTrigger : MonoBehaviour
         if (GameManager.player.GetFlag("scene3_blockBlackBay"))
         {
             gameObject.SetActive(true);
-            rightSoldier.transform.position = leftSoldier.transform.position + new Vector3(2, 0, 0);
-            leftBorder.transform.position = rightSoldier.transform.position;
+            soldier.transform.rotation = Vector3.zero;
+            leftBorder.transform.position = soldier.transform.position;
         }
         else
         {
             gameObject.SetActive(false);
             if (!GameManager.player.GetFlag("scene3_allowFlagship"))
             {
-                rightBorder.transform.position = leftSoldier.transform.position;
+                rightBorder.transform.position = soldier.transform.position;
             }
         }
     }
