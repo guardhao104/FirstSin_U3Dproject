@@ -5135,7 +5135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 469465131}
-  headImage: {fileID: 21300000, guid: 312f1443d4751d9449d7afab2244d66b, type: 3}
+  headImage: {fileID: 21300000, guid: ef09ed975d2444440933dcb006553ae0, type: 3}
   newDialogeIcon: {fileID: 21300000, guid: dfec9425890e74a4d9d18b6ef600c542, type: 3}
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
@@ -7068,7 +7068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 134110845}
-  headImage: {fileID: 21300000, guid: 312f1443d4751d9449d7afab2244d66b, type: 3}
+  headImage: {fileID: 21300000, guid: ef09ed975d2444440933dcb006553ae0, type: 3}
   newDialogeIcon: {fileID: 21300000, guid: dfec9425890e74a4d9d18b6ef600c542, type: 3}
   repeatDialogeIcon: {fileID: 21300000, guid: 7d12c4bef6c7f53429760d7dbe18f1d5, type: 3}
   graphNumber: 0
